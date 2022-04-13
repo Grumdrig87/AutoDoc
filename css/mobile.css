@@ -1,0 +1,209 @@
+
+
+/* 993-1200px */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+ 
+/* 769-993px */
+@media screen and (max-width: 993px) {
+  .container{
+      width: 90%;
+  }
+  .header__nav {
+    position: absolute;
+    top: 0;
+    padding: 90px 0 30px;
+    left: -100%;
+    height: 96vh;
+    background-color: #fff;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 1, 1, 0.15);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0, 1, 1, 0.15);
+         box-shadow: 0px 0px 16px 0px rgba(0, 1, 1, 0.15);
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    -moz-transition: 0.8s;
+    transition: 0.8s;
+    width: 50%;
+    z-index: 7;
+  }
+  .header__nav.open {
+    overflow-y: scroll;
+    left: 0;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    -moz-transition: 0.8s;
+    transition: 0.8s;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__nav > ul:first-child {
+    margin-right: 0;
+}
+  .header__nav > ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+            flex-direction: column;
+    margin: 0;
+  }
+  .header__nav > ul > li {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(25, 25, 25, 0.2);
+    width: 100%;
+  }
+  .header__nav > ul > li > a {
+    display: inline-block;
+    color: #00435d;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+  }
+
+  .menu_btn {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    left: 0;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    -moz-transition: 0.8s;
+    transition: 0.8s;
+    cursor: pointer;
+    z-index: 8;
+  }
+  .menu_btn.open {
+    position: absolute;
+    left: 39%;
+}
+  .bar {
+    position: relative;
+    display: block;
+    width: 29px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #fff;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
+    overflow: hidden;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .bar:nth-of-type(1) {
+    top: 9px;
+    -moz-transition: top 0.3s ease 0.3s, -moz-transform 0.3s ease-out 0.1s;
+    -o-transition: top 0.3s ease 0.3s, -o-transform 0.3s ease-out 0.1s;
+    -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
+    -webkit-transition-delay: 0.3s, 0.1s;
+    -webkit-transition: top 0.3s ease 0.3s, -webkit-transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, -webkit-transform 0.3s ease-out 0.1s;
+    -moz-transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s, -moz-transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s, -webkit-transform 0.3s ease-out 0.1s, -moz-transform 0.3s ease-out 0.1s, -o-transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s, -webkit-transform 0.3s ease-out 0.1s;
+    -webkit-animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+    -moz-animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+      -o-animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+         animation: mrotr 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+  }
+  .bar:nth-of-type(2) {
+    top: 12px;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    transition: ease 0.3s;
+         -webkit-animation: fade .3s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+            -moz-animation: fade .3s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+              -o-animation: fade .3s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+                 animation: fade .3s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+  }
+  .bar:nth-of-type(3) {
+    top: 15px;
+    -moz-transition: top 0.3s ease 0.3s, -moz-transform 0.3s ease-out 0.1s;
+    -o-transition: top 0.3s ease 0.3s, -o-transform 0.3s ease-out 0.1s;
+    -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
+    -webkit-transition-delay: 0.3s, 0.1s;
+    -webkit-transition: top 0.3s ease 0.3s, -webkit-transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, -webkit-transform 0.3s ease-out 0.1s;
+    -moz-transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s, -moz-transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s, -webkit-transform 0.3s ease-out 0.1s, -moz-transform 0.3s ease-out 0.1s, -o-transform 0.3s ease-out 0.1s;
+    transition: top 0.3s ease 0.3s, transform 0.3s ease-out 0.1s, -webkit-transform 0.3s ease-out 0.1s;
+    -webkit-animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+    -moz-animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+      -o-animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+         animation: mrotl 2s cubic-bezier(0.5, 0.2, 0.2, 1.01);
+  }
+  .menu_btn.open .bar:nth-of-type(1) {
+    background: #000;
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+         transform: rotate(45deg);
+    -moz-transition: top 0.3s ease 0.1s, -moz-transform 0.3s ease-out 0.5s;
+    -o-transition: top 0.3s ease 0.1s, -o-transform 0.3s ease-out 0.5s;
+    -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
+    -webkit-transition-delay: 0.1s, 0.5s;
+    -webkit-transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;
+    -moz-transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s, -webkit-transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s, -o-transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s, -webkit-transform 0.3s ease-out 0.5s;
+  }
+  .menu_btn.open .bar:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu_btn.open .bar:nth-of-type(3) {
+    background: #000;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+     -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+         transform: rotate(-45deg);
+    -moz-transition: top 0.3s ease 0.1s, -moz-transform 0.3s ease-out 0.5s;
+    -o-transition: top 0.3s ease 0.1s, -o-transform 0.3s ease-out 0.5s;
+    -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease-out;
+    -webkit-transition-delay: 0.1s, 0.5s;
+    -webkit-transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;
+    -moz-transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s, -webkit-transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s, -o-transform 0.3s ease-out 0.5s;
+    transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s, -webkit-transform 0.3s ease-out 0.5s;
+  }
+  .header__nav > ul > li {
+    padding: 20px 20px 20px 11%;
+    margin-right: 0 !important;
+  }
+  
+}
+
+/* 577-768px */
+@media screen and (max-width: 768px) {
+  
+}
+
+
+/* 320-576px */
+@media screen and (max-width: 576px) {
+  
+}
