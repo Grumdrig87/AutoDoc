@@ -52,6 +52,7 @@ body {
 	line-height: 20px;
 	font-weight: 400;
 	color: #212121;
+	background: #FAF7F2;
 }
 .black-scr {
 	position: fixed;
@@ -156,6 +157,13 @@ textarea {
 	   -moz-box-align: start;
 	    -ms-flex-align: start;
 	        align-items: flex-start;
+}
+.aife {
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	   -moz-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 }
 .fdc {
 	-webkit-box-orient: vertical;
@@ -331,7 +339,6 @@ input {
 
 .header {
 	padding-top: 54px;
-	background: #FAF7F2;
 }
 .header__top {
 	background: #fff;
@@ -387,6 +394,7 @@ input {
 	line-height: 26px;
 	color: #FFB200;
 	outline: none;
+	cursor: pointer;
 	padding: 0 10px 5px;
 }
 .header__top-wrap {
@@ -414,9 +422,6 @@ input {
 	background: -moz-linear-gradient(357deg, #1D2553 -8.1%, #363E6B 107.88%);
 	background: -o-linear-gradient(357deg, #1D2553 -8.1%, #363E6B 107.88%);
 	background: linear-gradient(93deg, #1D2553 -8.1%, #363E6B 107.88%);
-}
-.header__nav ul > li > .sub-menu {
-	display: none;
 }
 .header__search {
 	max-width: 550px;
@@ -537,15 +542,39 @@ input {
 .header__nav ul > li > a {
 	color: #FFB200;
 }
+.header__nav ul > li a {
+	font-family: 'Arch';
+}
+.header__nav ul > li a:hover {
+	text-decoration: none;
+}
+.header__nav ul > li {
+	-webkit-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.header__nav ul > li:hover > a {
+	opacity: 0.7;
+}
+.header__nav ul > li.menu-item-has-children:hover > .sub-wrap {
+	display: block;
+}
 .header__nav ul > li > a span {
 	display: block;
 	margin-right: 10px;
 }
-.header__nav ul > li.menu-item-has-children:not(:first-child) > a {
+.header__nav > ul > li.menu-item-has-children:not(:first-child) > a {
 	position: relative;
 	padding-right: 22px;
 }
-.header__nav ul > li.menu-item-has-children:not(:first-child) > a::after {
+.header__nav > ul > li.menu-item-has-children:not(:first-child) > a::after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -556,4 +585,111 @@ input {
 	bottom: 0;
 	margin: auto 0;
 	background: url('../img/svg/shevr.svg') no-repeat 0 0 / cover;
+}
+.header__nav ul > li.menu-item-has-children > .sub-wrap {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	min-width: 250px;
+	padding-top: 10px;
+}
+.header__nav ul > li.menu-item-has-children .sub-menu {
+	width: 100%;
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px -2px 0px #F8BD59;
+	   -moz-box-shadow: 0px -2px 0px #F8BD59;
+	        box-shadow: 0px -2px 0px #F8BD59;
+	padding: 20px 0px 22px 17px;
+}
+.sub-title {
+	font-family: 'Arch';
+	font-size: 24px;
+	line-height: 26px;
+	color: #FFB200;
+	margin-bottom: 20px;
+}
+.sub-title svg {
+	margin-right: 16px;
+}
+.header__nav .sub-menu > li {
+	width: 100%;
+	padding-right: 20px;
+}
+.header__nav .sub-menu > li:not(:last-child) {
+	margin-bottom: 5px;
+}
+.header__nav .sub-menu > li > a {
+	color: #212121;
+}
+.header__nav .sub-menu > li.menu-item-has-children > .sub-wrap {
+	left: 100%;
+	top: 0;
+	padding: 0 0 0 6px;
+}
+.header__nav .sub-menu > li.menu-item-has-children:hover > .sub-wrap {
+	display: block;
+}
+.header__nav .sub-menu > li.menu-item-has-children {
+	position: relative;
+}
+.header__nav .sub-menu > li.menu-item-has-children a {
+	width: 100%;
+}
+.header__nav .sub-menu > li.menu-item-has-children::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	bottom: 0;
+	margin: auto 0;
+	width: 6px;
+	height: 10px;
+	background: url('../img/svg/arr-right.svg') no-repeat 0 0 / cover;
+}
+.main {
+	padding: 29px 0 25px;
+}
+.main__search {
+	width: 40%;
+}
+.main .swiper {
+	width: 35%;
+}
+.main__foto {
+	width: 20%;
+}
+.main__search {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05), 0px -2px 0px #FFB200;
+	   -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05), 0px -2px 0px #FFB200;
+	        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05), 0px -2px 0px #FFB200;
+	padding: 52px 20px;
+}
+.main__title {
+	font-size: 24px;
+	line-height: 26px;
+	color: #1D2553;
+	margin-bottom: 30px;
+}
+.main__search button {
+	width: 100%;
+	padding: 10px 0 6px;
+	background: #FFB200;
+	font-size: 24px;
+	line-height: 26px;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.main__search button:hover {
+	opacity: 0.8;
+}
+.main__search button svg {
+	margin-right: 10px;
 }
