@@ -205,7 +205,9 @@ a:hover {
 	
 }
 .title-m {
-	
+	font-family: 'Arch';
+	font-size: 24px;
+	line-height: 26px;
 }
 .title-s {
 	
@@ -651,25 +653,22 @@ input {
 .main {
 	padding: 29px 0 25px;
 }
-.main__search {
-	width: 40%;
-}
-.main .swiper {
+.main__slider {
 	width: 35%;
+	position: relative;
 }
 .main__foto {
 	width: 20%;
 }
 .main__search {
-	background: #FFFFFF;
+	width: 40%;
+	background: #FFFFFF url('../img/main-bg.png') no-repeat left bottom;
 	-webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05), 0px -2px 0px #FFB200;
 	   -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05), 0px -2px 0px #FFB200;
 	        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05), 0px -2px 0px #FFB200;
 	padding: 52px 20px;
 }
 .main__title {
-	font-size: 24px;
-	line-height: 26px;
 	color: #1D2553;
 	margin-bottom: 30px;
 }
@@ -692,4 +691,64 @@ input {
 }
 .main__search button svg {
 	margin-right: 10px;
+}
+.main__foto-item {
+	height: 47%;
+}
+.main__foto-item img,
+.main .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+.main__slider .swiper {
+	height: 100%;
+}
+.main .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: -22px !important;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.swiper-pagination-bullet {
+	-webkit-border-radius: 0 !important;
+	   -moz-border-radius: 0 !important;
+	        border-radius: 0 !important;
+	background: #CECECE !important;
+	width: 8px !important;
+	height: 8px !important;
+	border: 1px solid transparent !important;
+	opacity: 1 !important;
+	margin: 0 5px !important;
+}
+.swiper-pagination-bullet-active {
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+	border-color: #FFB200 !important;
+	background: #FFB200 !important;
+}
+.main__search-item {
+	width: 100%;
+}
+.main__search-item:not(:last-child) {
+	margin-bottom: 10px;
+}
+.main__search-wrap {
+	margin-bottom: 30px;
 }
