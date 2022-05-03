@@ -17,6 +17,16 @@ jQuery(document).ready(function($) {
       clickable: true,
     },
   });
+  //adaptive
+  if ($(window).width() < 994) {
+    $('[data-top]').appendTo('[data-nav]');
+    $('[data-tech]').appendTo('[data-nav]');
+    $('[data-logo]').after('<div class="wrap__adaptive df aic" data-adaptivewrap></div>');
+    $('[data-lang]').appendTo('[data-adaptivewrap]');
+    $('[data-favorite]').appendTo('[data-adaptivewrap]');
+    $('[data-login]').appendTo('[data-adaptivewrap]');
+  }
+
   // select
 function select (data,set,dropclass) {
   if (jQuery(data).length > 0) {

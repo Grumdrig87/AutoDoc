@@ -29,11 +29,11 @@
         <header class="header">
             <div class="header__top">
                 <div class="container df aic jcsb">
-                    <div class="header__tech ff-arch">
+                    <div class="header__tech ff-arch" data-tech>
                         Saytın texniki dəstəyi: 
                         <a href="tel:+994502057501" class="ff-arch">+994 50 2057501</a>
                     </div>
-                    <div class="header__top-wrap df aic jcsb">
+                    <div class="header__top-wrap df aic jcsb" data-top>
                         <div class="header__top-nav">
                             <ul class="df aic">
                                 <li>
@@ -56,18 +56,23 @@
                         <a href="#" class="square__btn ff-arial">
                             <span>Premium</span>
                         </a>
-                        <div class="header__lang">
+                        <div class="header__lang" data-lang>
                             <select name="lang" id="lang">
                                 <option value="az">az</option>
                                 <option value="ru">ru</option>
                                 <option value="en">en</option>
                             </select>
                         </div>
-                        <a href="#" class="header__favorite">
-                            <svg class="svgheart"><use xlink:href="img/sprite.svg#heart"></use></svg>
+                        <a href="#" class="header__favorite" data-favorite>
+                            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.0723 2.94496C23.4614 2.32835 22.7361 1.83921 21.9378 1.50549C21.1396 1.17177 20.2839 1 19.4199 1C18.5558 1 17.7001 1.17177 16.9019 1.50549C16.1036 1.83921 15.3783 2.32835 14.7674 2.94496L13.4997 4.22404L12.2319 2.94496C10.998 1.70004 9.3245 1.00065 7.57951 1.00065C5.83452 1.00065 4.16099 1.70004 2.92709 2.94496C1.6932 4.18988 1 5.87836 1 7.63895C1 9.39954 1.6932 11.088 2.92709 12.3329L4.19485 13.612L13.4997 23L22.8045 13.612L24.0723 12.3329C24.6834 11.7166 25.1682 10.9849 25.499 10.1794C25.8298 9.37403 26 8.51076 26 7.63895C26 6.76714 25.8298 5.90387 25.499 5.09846C25.1682 4.29305 24.6834 3.56128 24.0723 2.94496V2.94496Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
-                        <a href="#" class="header__login">
-                            <svg class="wh25"><use xlink:href="img/sprite.svg#login"></use></svg>
+                        <a href="#" class="header__login" data-login>
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.6666 1H23.2222C23.9589 1 24.6654 1.29266 25.1864 1.81359C25.7073 2.33453 26 3.04107 26 3.77778V23.2222C26 23.9589 25.7073 24.6655 25.1864 25.1864C24.6654 25.7073 23.9589 26 23.2222 26H17.6666" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.6667 13.5H1" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -75,8 +80,13 @@
             <div class="header__wrap">
                 <div class="container">
                     <div class="header__wrap-line df jcsb aic">
-                        <div class="logo">
+                        <div class="logo" data-logo>
                             <img src="img/logo.png" alt="AutoDoc">
+                        </div>
+                        <div class="menu_btn" data-burger>
+                            <div class="bar" data-id="bar"></div>
+                            <div class="bar" data-id="bar"></div>
+                            <div class="bar" data-id="bar"></div>
                         </div>
                         <div class="header__search df aic jcsb">
                             <input type="search" name="s" placeholder="Ehtiyyat hissələrini axtar">
@@ -87,11 +97,6 @@
                         <a href="#" class="btn header__btn">
                             Elan yerləşdir
                         </a>
-                        <div class="menu_btn" data-burger>
-                            <div class="bar" data-id="bar"></div>
-                            <div class="bar" data-id="bar"></div>
-                            <div class="bar" data-id="bar"></div>
-                        </div>
                     </div>
                     <div class="header__menu">
                         <nav class="header__nav" data-nav>
