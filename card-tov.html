@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+	<title>AutoDoc</title>
+	<meta name="keywords" content="AutoDoc" />
+    <meta name="description" content="AutoDoc">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+	<!-- OG Tags -->
+	<meta property="og:title" content="AutoDoc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:site_name" content="AutoDoc">
+    <meta property="og:description" content="AutoDoc" />
+    <!-- link CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <div class="black-scr" data-blkscr></div>
+    <div class="wrap">
+        <header class="header">
+            <div class="header__top">
+                <div class="container df aic jcsb">
+                    <div class="header__tech ff-arch" data-tech>
+                        Saytın texniki dəstəyi: 
+                        <a href="tel:+994502057501" class="ff-arch">+994 50 2057501</a>
+                    </div>
+                    <div class="header__top-wrap df aic jcsb" data-top>
+                        <div class="header__top-nav">
+                            <ul class="df aic">
+                                <li>
+                                    <a href="#">
+                                        Magazalar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Servislər
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Tərəfdaşlar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="square__btn ff-arial">
+                            <span>Premium</span>
+                        </a>
+                        <div class="header__lang" data-lang>
+                            <select name="lang" id="lang">
+                                <option value="az">az</option>
+                                <option value="ru">ru</option>
+                                <option value="en">en</option>
+                            </select>
+                        </div>
+                        <a href="#" class="header__favorite" data-favorite>
+                            <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.0723 2.94496C23.4614 2.32835 22.7361 1.83921 21.9378 1.50549C21.1396 1.17177 20.2839 1 19.4199 1C18.5558 1 17.7001 1.17177 16.9019 1.50549C16.1036 1.83921 15.3783 2.32835 14.7674 2.94496L13.4997 4.22404L12.2319 2.94496C10.998 1.70004 9.3245 1.00065 7.57951 1.00065C5.83452 1.00065 4.16099 1.70004 2.92709 2.94496C1.6932 4.18988 1 5.87836 1 7.63895C1 9.39954 1.6932 11.088 2.92709 12.3329L4.19485 13.612L13.4997 23L22.8045 13.612L24.0723 12.3329C24.6834 11.7166 25.1682 10.9849 25.499 10.1794C25.8298 9.37403 26 8.51076 26 7.63895C26 6.76714 25.8298 5.90387 25.499 5.09846C25.1682 4.29305 24.6834 3.56128 24.0723 2.94496V2.94496Z" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="header__login" data-login>
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.6666 1H23.2222C23.9589 1 24.6654 1.29266 25.1864 1.81359C25.7073 2.33453 26 3.04107 26 3.77778V23.2222C26 23.9589 25.7073 24.6655 25.1864 25.1864C24.6654 25.7073 23.9589 26 23.2222 26H17.6666" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.6667 13.5H1" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__wrap">
+                <div class="container">
+                    <div class="header__wrap-line df jcsb aic">
+                        <div class="logo" data-logo>
+                            <img src="img/logo.png" alt="AutoDoc">
+                        </div>
+                        <div class="menu_btn" data-burger>
+                            <div class="bar" data-id="bar"></div>
+                            <div class="bar" data-id="bar"></div>
+                            <div class="bar" data-id="bar"></div>
+                        </div>
+                        <div class="header__search df aic jcsb">
+                            <input type="search" name="s" placeholder="Ehtiyyat hissələrini axtar">
+                            <button>
+                                <svg class="wh18"><use xlink:href="img/sprite.svg#search"></use></svg>
+                            </button>
+                        </div>
+                        <a href="#" class="btn header__btn">
+                            Elan yerləşdir
+                        </a>
+                    </div>
+                    <div class="header__menu">
+                        <nav class="header__nav" data-nav>
+                            <ul class="df jcsb">
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="18" height="15"><use xlink:href="img/sprite.svg#catalog"></use></svg>
+                                        </span>
+                                        Kataloq
+                                    </a>
+                                    <div class="sub-wrap">
+                                        <ul class="sub-menu">
+                                            <span class="sub-title df aic">
+                                                <span>
+                                                    <svg width="18" height="15"><use xlink:href="img/sprite.svg#catgrey"></use></svg>
+                                                </span>
+                                                Kataloq
+                                            </span>
+                                            <li class="menu-item menu-item-has-children">
+                                                <a href="#">
+                                                    Yağları
+                                                </a>
+                                                <div class="sub-wrap">
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item">
+                                                            <a href="#">
+                                                                Motor yağları
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="#">
+                                                                Sürət qutusu yagları
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="#">
+                                                                Antifriz
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item">
+                                                            <a href="#">
+                                                                Şüçəyuyan maye
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">
+                                                    Təkərlər
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">
+                                                    Kardan valları
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">
+                                                    Katalizator və Səsboğucular
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#">
+                                                    Avtomobilə qayğı
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="47" height="23"><use xlink:href="img/sprite.svg#car"></use></svg>
+                                        </span>
+                                        Yük maşinları
+                                    </a>
+                                    <div class="sub-wrap">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="#" class="df aic">
+                                                    <span>
+                                                        <svg width="46" height="21"><use xlink:href="img/sprite.svg#bus"></use></svg>
+                                                    </span>
+                                                    Avtobuslar
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#" class="df aic">
+                                                    <span>
+                                                        <svg width="32" height="18"><use xlink:href="img/sprite.svg#smallcar"></use></svg>
+                                                    </span>
+                                                    Avtomobillər
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#" class="df aic">
+                                                    <span>
+                                                        <svg width="32" height="20"><use xlink:href="img/sprite.svg#moto"></use></svg>
+                                                    </span>
+                                                    Motosiklet
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="16" height="25"><use xlink:href="img/sprite.svg#oil"></use></svg>
+                                        </span>
+                                        Mühərrik yağları
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="17" height="25"><use xlink:href="img/sprite.svg#filter"></use></svg>
+                                        </span>
+                                        Filterlər
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="25" height="25"><use xlink:href="img/sprite.svg#wheel"></use></svg>
+                                        </span>
+                                        Təkərlər
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="24" height="25"><use xlink:href="img/sprite.svg#akses"></use></svg>
+                                        </span>
+                                        Aksessuarlar
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="21" height="25"><use xlink:href="img/sprite.svg#tools"></use></svg>
+                                        </span>
+                                        Alətlər
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="df aic">
+                                        <span>
+                                            <svg width="26" height="25"><use xlink:href="img/sprite.svg#cart"></use></svg>
+                                        </span>
+                                        Outlet
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>
+                    <a class="breadcrumbs__link" href="index.html"> 
+                        <span>
+                            Əsas səyfə  
+                        </span>
+                    </a>
+                </span>
+                <span class="breadcrumbs__separator"></span>
+                <span>
+                    <a class="breadcrumbs__link" href="#"> 
+                        <span>
+                            Mayelər və yağlar
+                        </span>
+                    </a>
+                </span>
+                <span class="breadcrumbs__separator"></span>
+                <span class="breadcrumbs__current">
+                    “LAND-ROVER” Castrol yağı “ECoÜ-20 15DA25”
+                </span>
+            </div>
+        </div>
+        <section class="product">
+            <div class="container">
+                <div class="product__wrap df jcsb">
+                    <div class="product__descr">
+                        <h1 class="title-l">
+                            "LAND-ROVER Castrol" yağı "EC 0W-20 15DA25"
+                        </h1>
+                        <div class="product__about df jcsb">
+                            <div class="product__foto df jcsb aifs">
+                                <div class="product__foto-prev">
+                                    <ul>
+                                        <li class="product__foto-previtem active" data-fotoprev>
+                                            <img src="img/prod.jpg" alt="">
+                                        </li>
+                                        <li class="product__foto-previtem" data-fotoprev>
+                                            <img src="img/prod.jpg" alt="">
+                                        </li>
+                                        <li class="product__foto-previtem" data-fotoprev>
+                                            <img src="img/prod.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="product__foto-all">
+                                        Bütün şəkillərə <br> bax
+                                    </a>
+                                </div>
+                                <div class="product__foto-big">
+                                    <div class="product__foto-bigitem active">
+                                        <img src="img/prod.jpg" alt="">
+                                    </div>
+                                    <div class="product__foto-bigitem">
+                                        <img src="img/auto99.png" alt="">
+                                    </div>
+                                    <div class="product__foto-bigitem">
+                                        <img src="img/prod.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__about-descr">
+                                <div class="product__price">
+                                    25 azn
+                                </div>
+                                <div class="product__meta">
+                                    <div class="product__meta-item">
+                                        Tarixi: <span>12.02.2022</span>
+                                    </div>
+                                    <div class="product__meta-item">
+                                        Elanın nömrəsi: <span>BC12025</span>
+                                    </div>
+                                </div>
+                                <div class="product__feat">
+                                    <div class="product__title">
+                                        Xüsusiyyətlər
+                                    </div>
+                                    <div class="product__feat-list">
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Məhsulun növü:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                Mayelər və yağlar
+                                            </div>
+                                        </div>
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Avtomobil markası:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                LAND ROVER
+                                            </div>
+                                        </div>
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Avtomobil Modeli:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                Bütün modellər
+                                            </div>
+                                        </div>
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Məhsulun OEM nömrəsi:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                5055107436899
+                                            </div>
+                                        </div>
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Orijinal:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                Bəli
+                                            </div>
+                                        </div>
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Yeni məhsul:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                Bəli
+                                            </div>
+                                        </div>
+                                        <div class="product__feat-item df">
+                                            <div class="product__feat-name">
+                                                Çatdırma:
+                                            </div>
+                                            <div class="product__feat-txt">
+                                                Xeir
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__title">
+                            Şərh
+                        </div>
+                        <div class="product__info">
+                            <p>
+                                Castrol yağlarının bütün dopuskaları var buyurun elaqe saxlayın
+                                alman texnalogiyasi ile hazirlanmis butun standartlara cavab verir zavod probeqi 8min km ve 10 mi km yurus zavod verir <br>
+                                Karobka yağları
+                            </p>
+                            <p>
+                                Mercedes-Benz
+                            </p>
+                            <p>
+                                Oem kodu ; 001 989 46 03 
+                            </p>
+                            <p>
+                                Qiymət 1L-nə aiddir
+                            </p>
+                            <p>
+                                -------- W169 <br>
+                                -A150<br>
+                                -A160<br>
+                                -A170<br>
+                                -A180<br>
+                                -A200<br>
+                                -A200cdi<br>
+                                -A200turbo
+                            </p>
+                            <p>
+                                -------- W245<br>
+                                -B150<br>
+                                -B160<br>
+                                -B170<br>
+                                -B180<br>
+                                -B200<br>
+                                -B200cdi<br>
+                                -B200turbo
+                            </p>
+                            <ul>
+                                <li>
+                                    999 Avto mağazalar şəbəkəsi.
+                                </li>
+                                <li>
+                                    Whatsapp aktivdir.
+                                </li>
+                                <li>
+                                    Əlavə suallarınız üçün whatsapp nömrələrimizə yazmağınız kifayətdir.
+                                </li>
+                                <li>
+                                    Çatdırılma var - Razılaşma Yolu İlə.
+                                </li>
+                                <li>
+                                    Bir Kart keçərlidir. (3 ay taksit)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product__seller">
+                        <div class="product__seller-meta df aic jcfe">
+                            <div class="product__seller-viewed df aic ff-arch">
+                                <svg width="30" height="22"><use xlink:href="img/sprite.svg#eye"></use></svg>
+                                <span>342</span>
+                            </div>
+                            <button class="catalog__card-favorite product__favorite" data-heart>
+                                <svg width="29" height="25" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.9205 2.06089C13.5784 1.72455 13.1722 1.45775 12.7252 1.27572C12.2782 1.09369 11.799 1 11.3151 1C10.8312 1 10.3521 1.09369 9.90504 1.27572C9.45801 1.45775 9.05185 1.72455 8.70976 2.06089L7.99982 2.75857L7.28988 2.06089C6.5989 1.38184 5.66172 1.00035 4.68453 1.00035C3.70733 1.00035 2.77016 1.38184 2.07917 2.06089C1.38819 2.73994 1 3.66092 1 4.62124C1 5.58157 1.38819 6.50255 2.07917 7.1816L2.78911 7.87928L7.99982 13L13.2105 7.87928L13.9205 7.1816C14.2627 6.84543 14.5342 6.44628 14.7194 6.00697C14.9047 5.56765 15 5.09678 15 4.62124C15 4.14571 14.9047 3.67484 14.7194 3.23552C14.5342 2.79621 14.2627 2.39706 13.9205 2.06089Z" stroke="#FF3333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <span class="catalog__card-label product__label">
+                                Premium
+                            </span>
+                        </div>
+                        <div class="product__seller-card">
+                            <div class="product__seller-top df aic">
+                                <div class="product__seller-foto">
+                                    <img src="img/auto99.png" alt="">
+                                </div>
+                                <div class="product__seller-name">
+                                    AVTO 999
+                                </div>
+                            </div>
+                            <p>
+                                "Avto 999" olaraq sizə istənilən avtomobil markası üçün ehtiyat hissələr təklif edirik.
+                            </p>
+                        </div>
+                        <div class="product__seller-card">
+                            <ul class="product__seller-contacts">
+                                <li>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="url(#paint0_linear_367_5921)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11 5V11L15 13" stroke="url(#paint1_linear_367_5921)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_367_5921" x1="0.704432" y1="-25.8987" x2="25.0504" y2="-24.6223" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1D2553"/>
+                                        <stop offset="1" stop-color="#363E6B"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_367_5921" x1="10.9409" y1="-5.75948" x2="15.8201" y2="-5.63158" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1D2553"/>
+                                        <stop offset="1" stop-color="#363E6B"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>                                        
+                                    <span>Hər gün: 09:00 - 21:00</span>
+                                </li>
+                                <li>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.8881 15.9201V18.9201C20.8892 19.1986 20.8322 19.4743 20.7206 19.7294C20.6091 19.9846 20.4454 20.2137 20.2402 20.402C20.035 20.5902 19.7927 20.7336 19.5289 20.8228C19.265 20.912 18.9855 20.9452 18.7081 20.9201C15.631 20.5857 12.6751 19.5342 10.0781 17.8501C7.66194 16.3148 5.61345 14.2663 4.07812 11.8501C2.38809 9.2413 1.33636 6.27109 1.00812 3.1801C0.983127 2.90356 1.01599 2.62486 1.10462 2.36172C1.19324 2.09859 1.33569 1.85679 1.52288 1.65172C1.71008 1.44665 1.93792 1.28281 2.19191 1.17062C2.44589 1.05843 2.72046 1.00036 2.99812 1.0001H5.99812C6.48342 0.995321 6.95391 1.16718 7.32188 1.48363C7.68985 1.80008 7.93019 2.23954 7.99812 2.7201C8.12474 3.68016 8.35957 4.62282 8.69812 5.5301C8.83266 5.88802 8.86178 6.27701 8.78202 6.65098C8.70227 7.02494 8.51698 7.36821 8.24812 7.6401L6.97812 8.9101C8.40167 11.4136 10.4746 13.4865 12.9781 14.9101L14.2481 13.6401C14.52 13.3712 14.8633 13.1859 15.2372 13.1062C15.6112 13.0264 16.0002 13.0556 16.3581 13.1901C17.2654 13.5286 18.2081 13.7635 19.1681 13.8901C19.6539 13.9586 20.0975 14.2033 20.4146 14.5776C20.7318 14.9519 20.9003 15.4297 20.8881 15.9201Z" stroke="url(#paint0_linear_367_5931)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_367_5931" x1="0.706076" y1="-25.8022" x2="24.9168" y2="-24.5354" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1D2553"/>
+                                        <stop offset="1" stop-color="#363E6B"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>
+                                        <span>
+                                            (077) 359-9969
+                                        </span>
+                                        <span>
+                                            (070) 991-9999
+                                        </span>
+                                        <span>
+                                            (055) 544-0606
+                                        </span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 10C19 17 10 23 10 23C10 23 1 17 1 10C1 7.61305 1.94821 5.32387 3.63604 3.63604C5.32387 1.94821 7.61305 1 10 1C12.3869 1 14.6761 1.94821 16.364 3.63604C18.0518 5.32387 19 7.61305 19 10Z" stroke="url(#paint0_linear_367_5932)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z" stroke="url(#paint1_linear_367_5932)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_367_5932" x1="0.733989" y1="-28.5886" x2="22.6652" y2="-27.6478" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1D2553"/>
+                                        <stop offset="1" stop-color="#363E6B"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_367_5932" x1="6.91133" y1="-1.06961" x2="14.2151" y2="-0.6867" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1D2553"/>
+                                        <stop offset="1" stop-color="#363E6B"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>
+                                        <span>
+                                            Bakı ş.
+                                        </span>
+                                        <span>
+                                            Xətai r., L.Zadə (keç. Telnov) küç. 1
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product__seller-btns">
+                            <a href="#" class="product__seller-btn df aic jcc">
+                                <svg width="21" height="21"><use xlink:href="img/sprite.svg#ph-ring"></use></svg>
+                                Zəng etmək
+                            </a>
+                            <a href="#" class="product__seller-btn product__seller-btnsec df aic jcc">
+                                <svg width="18" height="18"><use xlink:href="img/sprite.svg#message"></use></svg>
+                                Mesaj yazmaq
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__catalog">
+                <div class="container">
+                    <div class="footer__title title-m">
+                        Kataloq
+                    </div>
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">
+                                Motor yağları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Təkərlər
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kardan valları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Katalizator və Səsboğucular
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Avtomobilə qayğı
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Aksessuarlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                İşiqlandırma
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Əyləc sistemləri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Electrika
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Amartizatorlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Radiatorlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                İnteryer və comfort
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Cardan valları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Ban hissələri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                İstilik və kondisioner sistemi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Yanacaq sistemi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Cardan valları
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Ban hissələri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                İstilik və kondisioner sistemi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Yanacaq sistemi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Motor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Mayyelər və yağlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kəmərlər
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Şüşələr və güzgülər
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Motor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Mayyelər və yağlar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Kəmərlər
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Şüşələr və güzgülər
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                İnstrumentlər
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Filterlər
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container df jcsb">
+                    <div class="footer__logo">
+                        <a href="#" class="footer__logo-img">
+                            <img src="img/logo-foot.png" alt="AutoDoc">
+                        </a>
+                        <p>
+                            Saytın rəhbərliyi reklam bannerlərinin və yerləşdirilmiş elanların məzmununa görə məsuliyyət daşımır.
+                        </p>
+                    </div>
+                    <div class="footer__mail">
+                        <div class="footer__title-bott title-m">
+                            Bizə yazın
+                        </div>
+                        <form action="post" class="footer__form df">
+                            <input type="email" name="email" placeholder="nümunə@mail.az">
+                            <button class="ff-arch">
+                                Göndər
+                            </button>
+                        </form>
+                        <ul class="footer__sm-menu df aic">
+                            <li>
+                                <a href="#">
+                                    Layihə haqda
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Reklam yerləşdirin
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    İstifadəçi razılaşması
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-item">
+                            <span>
+                                el. ünvan: 
+                            </span>
+                            <a href="mailto:office@autodoc.az">
+                                office@autodoc.az
+                            </a>
+                        </div>
+                        <div class="footer__contacts-item">
+                            <span>
+                                Tel.:
+                            </span>
+                            <a href="tel:0125990805">
+                                (012) 599-08-05 
+                            </a>
+                            <a href="tel:0125058585">
+                                (012) 505-85-85
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <object class="hidden" type="image/svg+xml" data="img/sprite.svg" >Your browser does not support SVG</object>
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/select2/css/select2.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2/js/select2.full.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
