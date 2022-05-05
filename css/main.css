@@ -1182,16 +1182,17 @@ input {
 	height: 25px;
 }
 .product {
-	padding: 56px 0;
+	padding: 52px 0;
 }
 .product__descr {
-	width: 74.5%;
+	width: 75%;
 }
 .product__seller {
-	width: 24.5%;
+	width: 24%;
+	padding-top: 12px;
 }
 .product .title-l {
-	margin-bottom: 26px;
+	margin-bottom: 30px;
 }
 .product__foto {
 	width: 53.5%;
@@ -1408,7 +1409,7 @@ input {
 .moreads__wrap-help {
 	overflow: hidden;
 	width: 1366px;
-	padding-bottom: 30px;
+	padding-bottom: 22px;
 }
 .similar {
 	padding: 30px 0 100px;
