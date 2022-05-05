@@ -34,6 +34,11 @@ jQuery(document).ready(function($) {
       clickable: true,
     },
   });
+  const moreads = new Swiper('[data-moreads]', {
+    // Optional parameters
+    slidesPerView: 7,
+    freeMode: true,
+  });
   //adaptive
   if ($(window).width() < 994) {
     $('[data-top]').appendTo('[data-nav]');
@@ -50,19 +55,19 @@ jQuery(document).ready(function($) {
       .closest('.product__foto').find('div.product__foto-bigitem').removeClass('active').eq($(this).index()).addClass('active');
     });
   // select
-function select (data,set,dropclass) {
-  if (jQuery(data).length > 0) {
-    jQuery(data).select2({
-      minimumResultsForSearch: Infinity,
-      width: set,
-      dropdownAutoWidth: true,
-      dropdownCssClass: dropclass
-    });
+  function select (data,set,dropclass) {
+    if (jQuery(data).length > 0) {
+      jQuery(data).select2({
+        minimumResultsForSearch: Infinity,
+        width: set,
+        dropdownAutoWidth: true,
+        dropdownCssClass: dropclass
+      });
+    }
   }
-}
-select ('[data-brand]','100%',"main-drop");
-select ('[data-model]','100%',"main-drop");
-select ('[data-engine]','100%',"main-drop");
+  select ('[data-brand]','100%',"main-drop");
+  select ('[data-model]','100%',"main-drop");
+  select ('[data-engine]','100%',"main-drop");
 
 $('.main__search-item select').on("change", function(e) { 
   $(this).parent().addClass('selected');

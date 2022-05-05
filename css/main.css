@@ -1401,3 +1401,24 @@ input {
 	text-decoration: none;
 	opacity: 0.8;
 }
+.moreads .title-m,
+.similar .title-m {
+	margin-bottom: 10px;
+}
+.moreads__wrap-help {
+	overflow: hidden;
+	width: 1366px;
+	padding-bottom: 30px;
+}
+.similar {
+	padding: 30px 0 100px;
+}
+.similar__wrap {
+	max-width: 1166px;
+	margin: 0 auto;
+}
+.similar .catalog__card {
+	width: -webkit-calc(100%/6);
+	width: -moz-calc(100%/6);
+	width: calc(100%/6);
+}
