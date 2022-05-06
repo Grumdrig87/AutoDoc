@@ -201,6 +201,12 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+.title-xl {
+	font-family: 'Arch';
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 70px;
+}
 .title-l {
 	font-family: 'Arch';
 	font-weight: 400;
@@ -291,7 +297,8 @@ input {
 /* ----STARS---- */
 
 .stars {
-	width: 80px;
+	width: 115px;
+	margin-left: 5px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -303,16 +310,16 @@ input {
 	display: block;
 	height: 100%;
 	font-size: 0;
-	line-height: 20px
+	line-height: 18px
 }
 .rating__star {
 	display: inline-block;
 	vertical-align: middle;
-	width: 14px;
-	height: 13px;
-	margin: 0 1.35px;
+	width: 19px;
+	height: 18px;
+	margin: 0 2.5px;
 	text-align: center;
-	background: url('../img/svg/star-trans.svg') 0 1px no-repeat;
+	background: url('../img/svg/star-trans.svg') no-repeat 0 0 / cover;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100%;
 	background-size: 100%
@@ -1422,4 +1429,123 @@ input {
 	width: -webkit-calc(100%/6);
 	width: -moz-calc(100%/6);
 	width: calc(100%/6);
+}
+
+/* ---autodoc--- */
+
+.autodoc {
+	padding: 41px 0 60px;
+}
+.autodoc__info {
+	width: 75%;
+	padding: 23px 20px 30px;
+	background: url('../img/autodoc-bg.png') no-repeat 0 0 / cover;
+	color: #fff;
+}
+.autodoc__media {
+	width: 24%;
+}
+.autodoc__info-left {
+	width: 54%;
+}
+.autodoc__info-right {
+	width: 34%;
+	text-align: right;
+	padding-top: 7px;
+}
+.autodoc .title-xl {
+	margin-bottom: 19px;
+}
+.autodoc__info-meta {
+	color: #88A7AA;
+	margin-bottom: 30px;
+}
+.autodoc__info-date > span {
+	color: #fff;
+	display: inline-block;
+	margin-left: 5px;
+}
+.autodoc__info-date {
+	margin-bottom: 10px
+}
+.autodoc__info-contimg {
+	width: 20px;
+	height: 20px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-left: 16px;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	   -moz-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.autodoc__info-contitem span {
+	display: block;
+}
+.autodoc__info-contitem:not(:last-child) {
+	margin-bottom: 10px;
+}
+.autodoc__media-item {
+	height: 49%;
+}
+.autodoc__media-item > img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.autodoc__wrap {
+	margin-bottom: 10px;
+}
+.autodoc__tabs {
+	color: #fff;
+	padding: 13px 38px 11px;
+	background: #FFB200;
+	margin-bottom: 10px;
+	font-family: 'Arch';
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 26px;
+}
+.autodoc__tab {
+	opacity: 0.5;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.autodoc__tab:not(:last-child) {
+	margin-right: 30px;
+}
+.autodoc__tab.active {
+	opacity: 1;
+	font-weight: 700;
+}
+.autodoc__tab:hover {
+	opacity: 1;
+}
+.autodoc__content-item {
+	display: none;
+}
+.autodoc__content-item.active {
+	display: block;
+}
+.autodoc__content {
+	padding: 20px;
+	background: #fff;
+}
+.autodoc__content .catalog__card {
+	width: -webkit-calc(100%/6);
+	width: -moz-calc(100%/6);
+	width: calc(100%/6);
+	padding: 5px 14px;
+}
+.autodoc__content .catalog {
+	margin: -5px -14px;
 }

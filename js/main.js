@@ -50,10 +50,18 @@ jQuery(document).ready(function($) {
     closeBurger ();
   }
 // tabs
+if ($('[data-fotoprev]').length > 0) {
   $('[data-fotoprev]').on('click', function() {
     $(this).addClass('active').siblings().removeClass('active')
       .closest('.product__foto').find('div.product__foto-bigitem').removeClass('active').eq($(this).index()).addClass('active');
     });
+  }
+  if ($('[data-tab]').length > 0) {
+    $('[data-tab]').on('click', function() {
+      $(this).addClass('active').siblings().removeClass('active')
+        .closest('.autodoc__catalog').find('div.autodoc__content-item').removeClass('active').eq($(this).index()).addClass('active');
+      });
+    }
   // select
   function select (data,set,dropclass) {
     if (jQuery(data).length > 0) {
