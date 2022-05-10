@@ -24,18 +24,28 @@ jQuery(document).ready(function($) {
       $('[data-nav]').toggleClass("open");
       $('body').toggleClass('open');
   });
+  //miss click burger
+  function closeBurger () {
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+      var div = $("[data-blkscr]"); // тут указываем ID элемента
+      if (div.is(e.target)) { // и не по его дочерним элементам
+        $('body').removeClass('open');
+        $('html').removeClass("open");
+        $('[data-burger]').removeClass("open");
+        $('[data-nav]').removeClass("open");
+      }
+    });
+  };
+  closeBurger();
+  //slider
   const swiper = new Swiper('.swiper', {
-    // Optional parameters
     loop: true,
-  
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
   });
   const moreads = new Swiper('[data-moreads]', {
-    // Optional parameters
     slidesPerView: 7,
     freeMode: true,
   });

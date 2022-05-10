@@ -3,6 +3,10 @@
   .container {
     width: 1200px;
   }
+  .banner span {
+    width: 269px;
+    height: 269px;
+}
 }
 /* 993-1200px */
 @media screen and (max-width: 1200px) {
@@ -22,6 +26,10 @@
 .header__top-nav ul li a {
   font-size: 18px;
   line-height: 20px;
+}
+.banner span {
+  width: 209px;
+  height: 209px;
 }
 }
  
@@ -442,6 +450,41 @@
 .header__lang select option {
   color: #212121;
 }
+.banner {
+  height: 230px;
+  margin-bottom: 30px;
+}
+.banner span {
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.shop__meta {
+  width: 100%;
+}
+.shop__wrap {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.information {
+  width: 100%;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+     -moz-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.shop__soc, .shop__cont {
+  width: 45%;
+  margin-bottom: 10px;
+}
+.shop .title-m {
+  margin-bottom: 30px;
+}
+.shop .catalog__card {
+  width: 25%;
+}
 }
 
 /* 577-768px */
@@ -507,6 +550,9 @@
   .footer__form {
     margin-bottom: 13px;
   }
+  .shop .catalog__card {
+    width: 33.33%;
+  }
 }
 
 
@@ -571,6 +617,51 @@
 .header__nav {
   width: 90%;
 }
+.breadcrumbs {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.breadcrumbs > span {
+  margin-bottom: 5px;
+}
+.shop__meta {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.shop__meta .autodoc__info-stars {
+  margin-bottom: 5px;
+}
+.shop__soc, .shop__cont {
+  width: 100%;
+}
+.title-l {
+  font-size: 26px;
+  line-height: 32px;
+}
+body {
+  font-size: 16px;
+}
+.shop__title {
+  font-size: 32px;
+  line-height: 35px;
+}
+.shop .catalog__card {
+  width: 50%;
+}
+.shop {
+  padding-bottom: 30px;
+}
 }
 @media screen and (max-width: 375px) {
  .header__favorite svg,
@@ -591,5 +682,8 @@
 }
 .footer__sm-menu li:not(:last-child) {
   margin-right: 6px;
+}
+.shop .catalog__card {
+  width: 100%;
 }
 }
