@@ -49,6 +49,15 @@ jQuery(document).ready(function($) {
     slidesPerView: 7,
     freeMode: true,
   });
+  const wheelSlide = new Swiper('[data-wheelSlide]', {
+    slidesPerView: 'auto',
+    freeMode: true,
+    spaceBetween: 10,
+    grid: {
+      rows: 2,
+      fill: 'row',
+    },
+  });
   //adaptive
   if ($(window).width() < 994) {
     $('[data-top]').appendTo('[data-nav]');

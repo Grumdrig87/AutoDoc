@@ -349,9 +349,6 @@ input {
 }
 /* -----------------------------Header---------------------------- */
 
-.header {
-	padding-top: 54px;
-}
 .header__top {
 	background: #fff;
 }
@@ -1668,4 +1665,18 @@ input {
 	color: #212121;
 	padding: 0 !important;
 	margin-bottom: 5px;
+}
+.wheel__firm .swiper-slide:first-child {
+	margin-left: -98px;
+}
+.wheel__firm .swiper-wrapper {
+	padding-left: 98px;
+}
+.wheel__firm .swiper-slide {
+	width: 134px !important;
+	height: 48px !important;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	overflow: hidden;
 }
