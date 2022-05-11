@@ -1647,3 +1647,25 @@ input {
 .select2-container--default.select2-container--disabled .select2-selection--single {
 	background-color: transparent !important;
 }
+.select2-dropdown {
+    border: none !important;
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+    padding: 20px 17px !important;
+    border-top: 2px solid #F8BD59 !important;
+}
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #fff !important;
+	color: #CECECE !important;
+}
+.select2-results__option {
+	font-family: 'Arch';
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 19px;
+	color: #212121;
+	padding: 0 !important;
+	margin-bottom: 5px;
+}
