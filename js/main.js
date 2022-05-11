@@ -53,6 +53,7 @@ jQuery(document).ready(function($) {
     slidesPerView: 'auto',
     freeMode: true,
     spaceBetween: 10,
+    initialSlide : 2,
     grid: {
       rows: 2,
       fill: 'row',
@@ -95,6 +96,7 @@ if ($('[data-fotoprev]').length > 0) {
   select ('[data-brand]','100%',"main-drop");
   select ('[data-model]','100%',"main-drop");
   select ('[data-engine]','100%',"main-drop");
+  select ('[data-wheel]','100%',"wheel-drop");
 
 $('.main__search-item select').on("change", function(e) { 
   $(this).parent().addClass('selected');
