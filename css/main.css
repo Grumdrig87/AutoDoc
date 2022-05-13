@@ -1982,3 +1982,45 @@ input {
 	   -moz-border-radius: 50%;
 	        border-radius: 50%;
 }
+.newprod {
+	padding: 20px 0 36px;
+}
+.newprod .title-m {
+	margin-bottom: 10px;
+}
+.newprod__wrap {
+	padding: 20px;
+	background: #fff;
+	position: relative;
+}
+.newprod__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+.newprod__item {
+	width: 60%;
+}
+.newprod__name span {
+	font-size: 24px;
+	line-height: 28px;
+	color: #FF3333;
+}
+.newprod__input {
+	width: 63%;
+}
+.newprod__input .select2-container--default .select2-selection--single {
+	border: 1px solid #CECECE !important;
+	height: 42px !important;
+	-webkit-border-radius: 0 !important;
+	   -moz-border-radius: 0 !important;
+	        border-radius: 0 !important;
+}
+.newprod__input input[type='text'] {
+	border: 1px solid #CECECE;
+	padding: 11px 15px 10px;
+	width: 100%;
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 19px;
+	color: #212121;
+}

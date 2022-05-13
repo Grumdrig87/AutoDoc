@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
     slidesPerView: 7,
     freeMode: true,
   });
-  const wheelSlide = new Swiper('[data-wheelSlide]', {
+  const wheelSlide = new Swiper('[data-selectsSlide]', {
     slidesPerView: 'auto',
     freeMode: true,
     spaceBetween: 10,
@@ -96,7 +96,7 @@ if ($('[data-fotoprev]').length > 0) {
   select ('[data-brand]','100%',"main-drop");
   select ('[data-model]','100%',"main-drop");
   select ('[data-engine]','100%',"main-drop");
-  select ('[data-wheel]','100%',"wheel-drop");
+  select ('[data-selects]','100%',"wheel-drop");
 
 $('.main__search-item select').on("change", function(e) { 
   $(this).parent().addClass('selected');
