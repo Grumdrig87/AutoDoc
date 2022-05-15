@@ -1756,16 +1756,16 @@ input {
 	padding: 0 10px;
 	width: 62px;
 }
-.wheels__input::-webkit-outer-spin-button,
-.wheels__input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 	margin: 0;
 }
-.wheels__input[type="number"] {
+input[type="number"] {
 	-moz-appearance: textfield;
 }	
-.wheels__input[type="number"]:hover,
-.wheels__input[type="number"]:focus {
+input[type="number"]:hover,
+input[type="number"]:focus {
 	-moz-appearance: number-input;
 }
 .wheels__input:first-child {
@@ -2014,13 +2014,182 @@ input {
 	   -moz-border-radius: 0 !important;
 	        border-radius: 0 !important;
 }
-.newprod__input input[type='text'] {
+.newprod__input input[type='text'],
+.newprod__input input[type='number'] {
 	border: 1px solid #CECECE;
 	padding: 11px 15px 10px;
-	width: 100%;
 	font-family: 'Roboto';
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 19px;
 	color: #212121;
+}
+.newprod__input input[type='text'] {
+	width: 100%;
+}
+.newprod__input input[type='number'] {
+	width: 124px;
+}
+.newprod__radio input {
+	display: none;
+}
+.newprod__radio label,
+.newprod__check label {
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 17px;
+	color: #060807;
+	cursor: pointer;
+	position: relative;
+	display: block;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.newprod__radio label {
+	padding-right: 20px;
+}
+.newprod__radio label::before,
+.newprod__radio label::after {
+	content: '';
+	position: absolute;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	        border-radius: 50%;
+}
+.newprod__radio label::before {
+	width: 15px;
+	height: 15px;
+	top: 1px;
+	right: 0;
+	display: block;
+	background: #FFFFFF;
+	border: 1px solid #CECECE;
+}
+.newprod__radio label::after {
+	width: 11px;
+	height: 11px;
+	top: 3px;
+	right: 2px;
+	display: none;
+	background: #FFB200;
+}
+.newprod__radio > input:checked ~ label::before {
+	border-color: #FFB200;
+}
+.newprod__radio > input:checked ~ label::after {
+	display: block;
+}
+.newprod__radio:not(:last-child) {
+	margin-right: 20px;
+}
+.newprod__input-alert {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	max-width: 451px;
+	width: 35%;
+	background: #FAF7F2;
+	-webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+	   -moz-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+	        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+	padding: 20px;
+	font-size: 13px;
+	line-height: 15px;
+}
+.newprod__input-label {
+	display: block;
+	margin-top: 5px;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 17px;
+	color: #88A7AA;
+}
+.newprod__input-quest {
+	position: relative;
+}
+.newprod__input-help {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	text-align: center;
+	background: #CECECE;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	        border-radius: 50%;
+	color: #fff;
+	top: 10px;
+	right: 11px;
+	cursor: pointer;
+}
+.newprod__input-helptxt {
+	display: none;
+	background: #FAF7F2;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: -70%;
+	max-width: 300px;
+}
+.newprod__input-help:hover ~ .newprod__input-helptxt {
+	display: block;
+}
+.newprod__check input {
+	display: none;
+}
+.newprod__check label {
+	padding-left: 20px;
+}
+.newprod__check label::before,
+.newprod__check label::after {
+	content: '';
+	position: absolute;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.newprod__check label::before {
+	background: #FFFFFF;
+	width: 15px;
+	height: 15px;
+	top: 1px;
+	left: 0;
+	border: 1px solid #CECECE;
+}
+.newprod__check label::after {
+	width: 13px;
+	height: 13px;
+	top: 2px;
+	left: 1px;
+	display: none;
+	background: url('../img/ok-inp.png') no-repeat 0 0 / cover;
+}
+.newprod__check input:checked ~ label::after {
+	display: block;
+}
+.newprod__input input[type='number'] {
+	margin-right: 9px;
+}
+.newprod__input input[type='number'] + span {
+	font-weight: 300;
+	font-size: 15px;
+}
+.newprod__textarea textarea {
+	background: #FFFFFF;
+	height: 179px;
+	display: block;
+	width: 100%;
+	border: 1px solid #CECECE;
+}
+.newprod__check label a {
+	-webkit-text-decoration-line: underline;
+	   -moz-text-decoration-line: underline;
+	        text-decoration-line: underline;
+	color: #6771A6;
+}
+.newprod__check:not(:last-child) {
+	margin-bottom: 10px;
 }
