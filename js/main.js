@@ -86,22 +86,13 @@ jQuery(document).ready(function($) {
     }
     if ($('[data-file]').length > 0) {
       $('[data-file]').on('change', function() {
-        // var fileBuffer=[];
-        // Array.prototype.push.apply( fileBuffer, $('[data-file]').get(0).files );
-        var name_file = []; 
-        
+        var file_url = [];
           for(var i = 0; i < $(this).get(0).files.length; ++i) {
-            var reader = new FileReader();
-            $("[data-dropfoto]").append('<div><img src="" alt="" class="image" data-index="'+i+'"></div>');
-            
-            reader.onload = function (e) {
-              name_file.push(e.target.result);
-            };
-            reader.readAsDataURL($(this).get(0).files[i])
-            $('[data-index="'+i+'"]').attr('src', $(this).get(0).files[i])
+            URL.createObjectURL($(this).get(0).files[i])
+            file_url[i] = '<div class="file__upload-wrap"><div class="file__upload obj-cover"><img src="'+ URL.createObjectURL($(this).get(0).files[i]) +'" alt="" class="image" data-index="'+i+'"></div></div>';
           } 
-          console.log(name_file);
-          // $("[data-dropfoto]").html(name_file); 
+          $("[data-dropfoto]").html(file_url);
+          $("[data-dropzone]").addClass('load');
           $('span.del').click(function(){
             $(this).parent().hide();
             var spanId = $(this).parent().index();

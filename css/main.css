@@ -1997,7 +1997,7 @@ input[type="number"]:focus {
 	margin-bottom: 20px;
 }
 .newprod__item {
-	width: 60%;
+	width: 62%;
 }
 .newprod__name span {
 	font-size: 24px;
@@ -2197,10 +2197,25 @@ input[type="number"]:focus {
 	background: #FAF7F2;
 	padding: 15px;
 }
+.dropZone.load {
+	width: 100%;
+}
 .dropZone label {
-	padding: 50px;
+	padding: 45px 45px 45px 50px;
 	cursor: pointer;
 }
 .dropZone input {
 	display: none;
+}
+.drop__foto {
+	width: 66.66%;
+	margin: -10px;
+}
+.file__upload-wrap {
+	width: 50%;
+}
+.file__upload {
+	width: 100%;
+	height: 120px;
+	padding: 10px;
 }
