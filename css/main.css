@@ -2193,3 +2193,14 @@ input[type="number"]:focus {
 .newprod__check:not(:last-child) {
 	margin-bottom: 10px;
 }
+.dropZone {
+	background: #FAF7F2;
+	padding: 15px;
+}
+.dropZone label {
+	padding: 50px;
+	cursor: pointer;
+}
+.dropZone input {
+	display: none;
+}
