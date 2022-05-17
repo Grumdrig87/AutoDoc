@@ -18,90 +18,101 @@ jQuery(document).ready(function($) {
   };
 
   // upload
+  //Скрипт на кастом добавления файла 
+ 
+  if($('#addImages')) {
+  
+    var maxFileSize = 2 * 1024 * 1024; // (байт) Максимальный размер файла (2мб)
+    var queue = {};
+    var form = $('form#uploadImages');
+    var imagesList = $('#uploadImagesList');
+  
+    var itemPreviewTemplate = imagesList.find('.item.template').clone();
+    itemPreviewTemplate.removeClass('template');
+    imagesList.find('.item.template').remove();
+  
+  
+    $('#addImages').on('change', function () {
+        var files = this.files;
+  
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+  
+            if ( !file.type.match(/image\/(jpeg|jpg|png|gif)/) ) {
+                alert( 'Фотография должна быть в формате jpg, png или gif' );
+                continue;
+            }
+  
+            if ( file.size > maxFileSize ) {
+                alert( 'Размер фотографии не должен превышать 2 Мб' );
+                continue;
+            }
+  
+            preview(files[i]);
+        }
+  
+        this.value = '';
+    });
+  
+    // Создание превью
+    function preview(file) {
+        var reader = new FileReader();
+        reader.addEventListener('load', function(event) {
+            var img = document.createElement('img');
+  
+            var itemPreview = itemPreviewTemplate.clone();
+  
+            itemPreview.find('.img-wrap img').attr('src', event.target.result);
+            itemPreview.data('id', file.name);
+  
+            imagesList.append(itemPreview);
+  
+            queue[file.name] = file;
+  
+        });
+        reader.readAsDataURL(file);
+    }
+  
+    // Удаление фотографий
+    imagesList.on('click', '.delete-link', function () {
+        var item = $(this).closest('.item'),
+            id = item.data('id');
+  
+        delete queue[id];
+  
+        item.remove();
+    });
+  
+  
+    // Отправка формы
+    form.on('submit', function(event) {
+  
+        var formData = new FormData(this);
+  
+        for (var id in queue) {
+            formData.append('images[]', queue[id]);
+        }
+  
+        $.ajax({
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: formData,
+            async: true,
+            success: function (res) {
+                alert(res)
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+  
+        return false;
+    });
+  }
+
 
   
-  if (jQuery('[data-dropzone]').length > 0) {
-    var dropZone = $('[data-dropzone]'),
-          maxFileSize = 10000000; // максимальный размер фалйа - 10 мб.
-      
-      // Проверка поддержки браузером
-      if (typeof(window.FileReader) == 'undefined') {
-          dropZone.text('Не поддерживается браузером!');
-          dropZone.addClass('error');
-      }
-      
-      // Добавляем класс hover при наведении
-      dropZone[0].ondragover = function() {
-          dropZone.addClass('hover');
-          return false;
-      };
-      
-      // Убираем класс hover
-      dropZone[0].ondragleave = function() {
-          dropZone.removeClass('hover');
-          return false;
-      };
-      
-      // Обрабатываем событие Drop
-      dropZone[0].ondrop = function(event) {
-          event.preventDefault();
-          dropZone.removeClass('hover');
-          dropZone.addClass('drop');
-          
-          var file = event.dataTransfer.files[0];
-          
-          // Проверяем размер файла
-          if (file.size > maxFileSize) {
-              dropZone.find('.addnew__drop').text('Файл слишком большой!');
-              dropZone.addClass('error');
-              return false;
-          }
-          
-          // Создаем запрос
-          var xhr = new XMLHttpRequest();
-          xhr.upload.addEventListener('progress', uploadProgress, false);
-          xhr.onreadystatechange = stateChange;
-          xhr.open('POST', '/upload.php');
-          xhr.setRequestHeader('X-FILE-NAME', file.name);
-          xhr.send(file);
-      };
-      
-      // Показываем процент загрузки
-      function uploadProgress(event) {
-          var percent = parseInt(event.loaded / event.total * 100);
-          dropZone.find('.addnew__drop').text('Загрузка: ' + percent + '%');
-      }
-      
-      // Пост обрабочик
-      function stateChange(event) {
-          if (event.target.readyState == 4) {
-              if (event.target.status == 200) {
-                  dropZone.find('.addnew__drop').text('Загрузка успешно завершена!');
-              } else {
-                  dropZone.find('.addnew__drop').text('Произошла ошибка!');
-                  dropZone.addClass('error');
-              }
-          }
-      }
-    }
-    if ($('[data-file]').length > 0) {
-      $('[data-file]').on('change', function() {
-        var file_url = [];
-          for(var i = 0; i < $(this).get(0).files.length; ++i) {
-            URL.createObjectURL($(this).get(0).files[i])
-            file_url[i] = '<div class="file__upload-wrap"><div class="file__upload obj-cover"><img src="'+ URL.createObjectURL($(this).get(0).files[i]) +'" alt="" class="image" data-index="'+i+'"></div></div>';
-          } 
-          $("[data-dropfoto]").html(file_url);
-          $("[data-dropzone]").addClass('load');
-          $('span.del').click(function(){
-            $(this).parent().hide();
-            var spanId = $(this).parent().index();
-            for(var i = 0; i < fileBuffer.length; ++i) {
-              delete fileBuffer[spanId];
-            } 
-          })
-      });
-    }
+ 
   // burger
   $('[data-burger]').click(function() {
       $('html').toggleClass("open");

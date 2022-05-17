@@ -488,14 +488,30 @@
                             <span>*</span>
                         </span>
                         <div class="newprod__input df">
-                            <div class="dropZone df fww" data-dropzone>
-                                <input type="file" name="flatfoto" id="proffoto" multiple accept=".jpg, .jpeg, .png" data-file>
-                                <div class="drop__foto df fww" data-dropfoto>
-
-                                </div>
-                                <label for="proffoto" class="df aic jcc">
-                                    <svg width="36" height="29"><use xlink:href="img/sprite.svg#drop"></use></svg>
+                            <div class="wrapperAddFile">
+                                <label class="addFile">
+                                    <input type="file" name="flatfoto" id="proffoto" multiple accept=".jpg, .jpeg, .png" id="addImages">
+                                    <div id="uploadImagesList">
+                                        <div class="item template">
+                                            <span class="img-wrap">
+                                                <img src="image.jpg" alt="">
+                                            </span>
+                                            <span class="delete-link" title="Удалить">
+                                                x
+                                            </span>
+                                        </div>
+                                        <label for="proffoto" class="df aic jcc">
+                                            <svg width="36" height="29"><use xlink:href="img/sprite.svg#drop"></use></svg>
+                                        </label>
+                                    </div>
                                 </label>
+                                <input type="hidden" name="azaza" value="zazaza">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="js-fileapi-wrapper upload-btn df fww" data-dropzone>
+                                <div class="drop__foto df fww" id="images">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -770,6 +786,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/select2/js/select2.full.min.js"></script>
+    <script src="js/fileapi/FileAPI.min.js"></script>
+    <script src="js/fileapi/jquery.fileapi.min.js"></script>
+    <script src="js/fileapi/FileAPI.exif.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
