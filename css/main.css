@@ -195,6 +195,13 @@ textarea {
 	-o-object-fit: cover;
 	   object-fit: cover;
 }
+.obj-cont img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	-o-object-fit: contain;
+	   object-fit: contain;
+}
 .asfe {
 	-webkit-align-self: flex-end;
 	    -ms-flex-item-align: end;
@@ -2194,3 +2201,42 @@ input[type="number"]:focus {
 	margin-bottom: 10px;
 }
 
+.wrapperAddFile {
+	background: #FAF7F2;
+	padding: 15px;
+	position: relative;
+}
+.addFile #addImages {
+	position: absolute;
+    top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    background: transparent;
+    opacity: 0;
+    cursor: pointer;
+	z-index: 1;
+}
+.addFile .item,
+.addFile-icon {
+	height: 120px;
+	width: 150px;
+	padding: 10px;
+}
+.addFile .item {
+	position: relative;
+	z-index: 2;
+}
+#uploadImagesList {
+	margin: -10px;
+}
+.delete-link {
+	position: absolute;
+	top: 15px;
+	cursor: pointer;
+	right: 15px;
+}
+.img-wrap {
+	border: 1px solid #CECECE;
+	height: 100%;
+}

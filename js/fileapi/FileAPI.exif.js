@@ -9,9 +9,7 @@
      * Copyright (c) 2008 Jacob Seidelin, cupboy@gmail.com, http://blog.nihilogic.dk/
      * Licensed under the MPL License [http://www.nihilogic.dk/licenses/mpl-license.txt]
      */
-    
-    
-    var BinaryFile=function(j,k,l){var h=j,i=k||0,b=0;this.getRawData=function(){return h};"string"==typeof j&&(b=l||h.length,this.getByteAt=function(a){return h.charCodeAt(a+i)&255},this.getBytesAt=function(a,b){for(var c=[],f=0;f<b;f++)c[f]=h.charCodeAt(a+f+i)&255;return c});this.getLength=function(){return b};this.getSByteAt=function(a){a=this.getByteAt(a);return 127<a?a-256:a};this.getShortAt=function(a,b){var c=b?(this.getByteAt(a)<<8)+this.getByteAt(a+1):(this.getByteAt(a+1)<<8)+this.getByteAt(a);
+var BinaryFile=function(j,k,l){var h=j,i=k||0,b=0;this.getRawData=function(){return h};"string"==typeof j&&(b=l||h.length,this.getByteAt=function(a){return h.charCodeAt(a+i)&255},this.getBytesAt=function(a,b){for(var c=[],f=0;f<b;f++)c[f]=h.charCodeAt(a+f+i)&255;return c});this.getLength=function(){return b};this.getSByteAt=function(a){a=this.getByteAt(a);return 127<a?a-256:a};this.getShortAt=function(a,b){var c=b?(this.getByteAt(a)<<8)+this.getByteAt(a+1):(this.getByteAt(a+1)<<8)+this.getByteAt(a);
     0>c&&(c+=65536);return c};this.getSShortAt=function(a,b){var c=this.getShortAt(a,b);return 32767<c?c-65536:c};this.getLongAt=function(a,b){var c=this.getByteAt(a),f=this.getByteAt(a+1),e=this.getByteAt(a+2),g=this.getByteAt(a+3),c=b?(((c<<8)+f<<8)+e<<8)+g:(((g<<8)+e<<8)+f<<8)+c;0>c&&(c+=4294967296);return c};this.getSLongAt=function(a,b){var c=this.getLongAt(a,b);return 2147483647<c?c-4294967296:c};this.getStringAt=function(a,b){for(var c=[],f=this.getBytesAt(a,b),e=0;e<b;e++)c[e]=String.fromCharCode(f[e]);
     return c.join("")};this.getCharAt=function(a){return String.fromCharCode(this.getByteAt(a))};this.toBase64=function(){return window.btoa(h)};this.fromBase64=function(a){h=window.atob(a)}},EXIF={};
     (function(){function j(b){if(255!=b.getByteAt(0)||216!=b.getByteAt(1))return!1;for(var a=2,d=b.getLength();a<d;){if(255!=b.getByteAt(a))return i&&console.log("Not a valid marker at offset "+a+", found: "+b.getByteAt(a)),!1;var c=b.getByteAt(a+1);if(22400==c||225==c)return i&&console.log("Found 0xFFE1 marker"),h(b,a+4,b.getShortAt(a+2,!0)-2);a+=2+b.getShortAt(a+2,!0)}}function k(b,a,d,c,f){for(var e=b.getShortAt(d,f),g={},h=0;h<e;h++){var j=d+12*h+2,k=c[b.getShortAt(j,f)];!k&&i&&console.log("Unknown tag: "+
@@ -31,11 +29,7 @@
     SensingMethod:{1:"Not defined",2:"One-chip color area sensor",3:"Two-chip color area sensor",4:"Three-chip color area sensor",5:"Color sequential area sensor",7:"Trilinear sensor",8:"Color sequential linear sensor"},SceneCaptureType:{"0":"Standard",1:"Landscape",2:"Portrait",3:"Night scene"},SceneType:{1:"Directly photographed"},CustomRendered:{"0":"Normal process",1:"Custom process"},WhiteBalance:{"0":"Auto white balance",1:"Manual white balance"},GainControl:{"0":"None",1:"Low gain up",2:"High gain up",
     3:"Low gain down",4:"High gain down"},Contrast:{"0":"Normal",1:"Soft",2:"Hard"},Saturation:{"0":"Normal",1:"Low saturation",2:"High saturation"},Sharpness:{"0":"Normal",1:"Soft",2:"Hard"},SubjectDistanceRange:{"0":"Unknown",1:"Macro",2:"Close view",3:"Distant view"},FileSource:{3:"DSC"},Components:{"0":"",1:"Y",2:"Cb",3:"Cr",4:"R",5:"G",6:"B"}};EXIF.getData=function(b,a){if(!b.complete)return!1;b.exifdata?a&&a():BinaryAjax(b.src,function(d){d=j(d.binaryResponse);b.exifdata=d||{};a&&a()});return!0};
     EXIF.getTag=function(b,a){if(b.exifdata)return b.exifdata[a]};EXIF.getAllTags=function(b){if(!b.exifdata)return{};var b=b.exifdata,a={},d;for(d in b)b.hasOwnProperty(d)&&(a[d]=b[d]);return a};EXIF.pretty=function(b){if(!b.exifdata)return"";var b=b.exifdata,a="",d;for(d in b)b.hasOwnProperty(d)&&(a="object"==typeof b[d]?a+(d+" : ["+b[d].length+" values]\r\n"):a+(d+" : "+b[d]+"\r\n"));return a};EXIF.readFromBinaryFile=function(b){return j(b)}})();
-    
-    
-    FileAPI.support.exif = true;
-    
-    
+FileAPI.support.exif = true;
     FileAPI.addInfoReader(/^image/, function (file/**File*/, callback/**Function*/){
         if( !file.__exif ){
             var defer = file.__exif = FileAPI.defer();

@@ -191,4 +191,8 @@
     <path d="M19 25C23.4183 25 27 21.4183 27 17C27 12.5817 23.4183 9 19 9C14.5817 9 11 12.5817 11 17C11 21.4183 14.5817 25 19 25Z" fill="#FFB200"></path>
     <path d="M24 17H14M19 12V22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="crossdel">
+    <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="white" stroke="#CECECE"></rect>
+    <path d="M11 11L8 8M8 8L5 5M8 8L11 5M8 8L5 11" stroke="#212121" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 </svg>
