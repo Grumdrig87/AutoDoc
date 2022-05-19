@@ -126,6 +126,13 @@ textarea {
 	display: -ms-flexbox;
 	display: flex;
 }
+.dif {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
 .aic {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
@@ -2206,12 +2213,12 @@ input[type="number"]:focus {
 	padding: 15px;
 	position: relative;
 }
-.addFile #addImages {
+.addFile input {
 	position: absolute;
     top: 0;
-	right: 0;
 	bottom: 0;
 	left: 0;
+	width: 100%;
     background: transparent;
     opacity: 0;
     cursor: pointer;
@@ -2222,19 +2229,32 @@ input[type="number"]:focus {
 	height: 120px;
 	width: 150px;
 	padding: 10px;
+	-webkit-box-ordinal-group: 251;
+	-webkit-order: 250;
+	   -moz-box-ordinal-group: 251;
+	    -ms-flex-order: 250;
+	        order: 250;
 }
-.addFile .item {
+.b-thumb {
 	position: relative;
 	z-index: 2;
 }
 #uploadImagesList {
 	margin: -10px;
 }
-.delete-link {
+.b-thumb__del {
 	position: absolute;
 	top: 15px;
 	cursor: pointer;
 	right: 15px;
+	z-index: 5;
+}
+.b-thumb__rotate {
+	position: absolute;
+	top: 15px;
+	cursor: pointer;
+	left: 15px;
+	z-index: 5;
 }
 .img-wrap {
 	border: 1px solid #CECECE;

@@ -195,4 +195,9 @@
     <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="white" stroke="#CECECE"></rect>
     <path d="M11 11L8 8M8 8L5 5M8 8L11 5M8 8L5 11" stroke="#212121" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="rotate">
+    <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="white" stroke="#CECECE"></rect>
+    <path d="M12.7211 4.43042V7.01379H10.1377" stroke="#212121" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M11.6401 9.1659C11.3602 9.95809 10.8305 10.6379 10.1306 11.1028C9.4308 11.5677 8.59882 11.7926 7.76007 11.7435C6.92132 11.6944 6.12124 11.3741 5.4804 10.8307C4.83955 10.2874 4.39266 9.55048 4.20706 8.73106C4.02146 7.91163 4.10722 7.05408 4.4514 6.28763C4.79558 5.52118 5.37955 4.88735 6.1153 4.48167C6.85105 4.07598 7.69872 3.92042 8.53058 4.03841C9.36244 4.1564 10.1334 4.54156 10.7273 5.13585L12.7208 7.01309" stroke="#212121" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 </svg>

@@ -482,7 +482,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="newprod__item df aifs jcsb fww">
+                    <!-- <div class="newprod__item df aifs jcsb fww">
                         <span class="newprod__name">
                             Şəkillər
                             <span>*</span>
@@ -506,6 +506,35 @@
                                     </div>
                                 </div>
                                 <input type="hidden" name="azaza" value="zazaza">
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="newprod__item df aifs jcsb fww">
+                        <span class="newprod__name">
+                            Şəkillər
+                            <span>*</span>
+                        </span>
+                        <div class="newprod__input df">
+                            <div class="b-upload b-upload_multi wrapperAddFile" id="multiupload">
+                                <div class="addFile__wrap df fww">
+                                    <div class="js-files b-upload__files dif fww">
+                                        <div class="js-file-tpl b-thumb" data-id="<%=uid%>" title="<%-name%>, <%-sizeText%>">
+                                            <div data-fileapi="file.remove" class="b-thumb__del"><svg width="16" height="16"><use xlink:href="img/sprite.svg#crossdel"></use></svg></div>
+                                            <div class="b-thumb__preview">
+                                                <div class="b-thumb__preview__pic"></div>
+                                            </div>
+                                            <% if( /^image/.test(type) ){ %>
+                                            <div data-fileapi="file.rotate.cw" class="b-thumb__rotate"><svg width="16" height="16"><use xlink:href="img/sprite.svg#rotate"></use></svg></div>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                    <div class="addFile-icon dif aic jcc">
+                                        <svg width="36" height="29"><use xlink:href="img/sprite.svg#drop"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="addFile">
+                                    <input type="file" name="filedata" accept=".jpg, .jpeg, .png">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -780,6 +809,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/select2/js/select2.full.min.js"></script>
+    <script src="js/fileapi/FileAPI.min.js"></script>
+    <script src="js/fileapi/jquery.fileapi.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/upload.js"></script>
     <script src="js/main.js"></script>
