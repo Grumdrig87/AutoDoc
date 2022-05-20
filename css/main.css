@@ -1997,21 +1997,24 @@ input[type="number"]:focus {
 	        border-radius: 50%;
 }
 .newprod {
-	padding: 20px 0 36px;
+	padding: 16px 0 36px;
 }
 .newprod .title-m {
-	margin-bottom: 10px;
+	margin-bottom: 13px;
 }
 .newprod__wrap {
 	padding: 20px;
 	background: #fff;
 	position: relative;
 }
+.newprod__name {
+    margin-top: 5px;
+}
 .newprod__item:not(:last-child) {
 	margin-bottom: 20px;
 }
 .newprod__item {
-	width: 62%;
+	width: 62.5%;
 }
 .newprod__name span {
 	font-size: 24px;
@@ -2019,7 +2022,7 @@ input[type="number"]:focus {
 	color: #FF3333;
 }
 .newprod__input {
-	width: 63%;
+	width: 60.5%;
 }
 .newprod__input .select2-container--default .select2-selection--single {
 	border: 1px solid #CECECE !important;
@@ -2224,7 +2227,6 @@ input[type="number"]:focus {
     cursor: pointer;
 	z-index: 1;
 }
-.addFile .item,
 .addFile-icon {
 	height: 120px;
 	width: 150px;
@@ -2238,25 +2240,29 @@ input[type="number"]:focus {
 .b-thumb {
 	position: relative;
 	z-index: 2;
+	padding: 5px;
+	width: 33.33%;
 }
-#uploadImagesList {
-	margin: -10px;
+.b-upload__files.loaded {
+	margin: -5px;
 }
 .b-thumb__del {
 	position: absolute;
-	top: 15px;
+	top: 10px;
 	cursor: pointer;
-	right: 15px;
+	right: 10px;
 	z-index: 5;
 }
 .b-thumb__rotate {
 	position: absolute;
-	top: 15px;
+	top: 10px;
 	cursor: pointer;
-	left: 15px;
+	left: 10px;
 	z-index: 5;
 }
-.img-wrap {
+.bthumb-wrap {
 	border: 1px solid #CECECE;
 	height: 100%;
+	overflow: hidden;
+	height: 120px;
 }
