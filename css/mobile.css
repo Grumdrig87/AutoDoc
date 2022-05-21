@@ -49,6 +49,13 @@
 .oil__description {
   width: 46.5%;
 }
+.b-thumb,
+.addFile-icon {
+  width: 50%;
+}
+.addFile-icon {
+  min-width: 150px;
+}
 }
  
 /* 769-993px */
@@ -561,6 +568,19 @@
 .oil__form {
   margin-bottom: 10px;
 }
+.newprod__item {
+  width: 100%;
+}
+.newprod__input-alert {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  max-width: unset;
+  padding: 15px;
+  margin-top: 5px;
+}
 }
 
 /* 577-768px */
@@ -664,7 +684,9 @@
   .oil__form-wrap {
     width: 33.33%;
 }
-
+.newprod__name {
+  font-size: 15px;
+}
 }
 
 
@@ -823,6 +845,15 @@ body {
 .oil__wrap {
   padding: 15px;
 }
+.newprod__input {
+  width: 100%;
+}
+.newprod__name {
+  margin: 0 0 5px;
+}
+.addFile-icon {
+  min-width: 125px;
+}
 }
 @media screen and (max-width: 375px) {
  .header__favorite svg,
@@ -846,5 +877,8 @@ body {
 }
 .shop .catalog__card {
   width: 100%;
+}
+.b-thumb, .addFile-icon {
+  width: 150px;
 }
 }

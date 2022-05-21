@@ -2100,8 +2100,8 @@ input[type="number"]:focus {
 .newprod__radio > input:checked ~ label::after {
 	display: block;
 }
-.newprod__radio:not(:last-child) {
-	margin-right: 20px;
+.newprod__radio {
+	padding: 10px;
 }
 .newprod__input-alert {
 	position: absolute;
@@ -2265,4 +2265,7 @@ input[type="number"]:focus {
 	height: 100%;
 	overflow: hidden;
 	height: 120px;
+}
+.newprod__input-radio {
+	margin: -10px;
 }
