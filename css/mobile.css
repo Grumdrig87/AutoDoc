@@ -56,6 +56,9 @@
 .addFile-icon {
   min-width: 150px;
 }
+.newprod__input-part:not(:last-child) {
+  margin-right: 23px;
+}
 }
  
 /* 769-993px */
@@ -686,6 +689,27 @@
 }
 .newprod__name {
   font-size: 15px;
+}
+.newprod__input-part:not(:last-child) {
+  margin: 0 0 15px;
+}
+.newprod__input-part {
+  width: 100%;
+}
+.error-page {
+  padding: 50px 0;
+}
+.error__tit {
+  font-size: 26px;
+  line-height: 30px;
+}
+.error__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.error__wrap p > br {
+  display: none;
 }
 }
 

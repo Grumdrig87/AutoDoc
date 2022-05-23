@@ -258,49 +258,48 @@
                 </div>
             </div>
         </header>
-        <div class="container">
-            <div class="breadcrumbs">
-                <span>
-                    <a class="breadcrumbs__link" href="index.html"> 
-                        <span>
-                            Əsas səyfə  
-                        </span>
-                    </a>
-                </span>
-                <span class="breadcrumbs__separator"></span>
-                <span class="breadcrumbs__current">
-                    Yeni elan
-                </span>
-            </div>
-        </div>
-        <section class="newprod">
-            <div class="container">
-                <h1 class="title-m">
-                    Yeni elan
-                </h1>
-                <div class="newprod__wrap">
+        <div class="error-page">
+            <div class="container container-sm">
+                <div class="error__wrap">
+                    <div class="error__tit">
+                        Təssüf edirik, axradığınız mal tapılmadı...
+                    </div>
+                    <div class="error__img df jcc">
+                        <img src="img/error.png" alt="">
+                    </div>
+                    <div class="error__tit">
+                        ...amma siz axtardığınızı sifariş edə bilərsiniz!!!
+                    </div>
+                    <p>
+                        Aşağıdaki xanaları doldurub müraciyat edin. Sizin müraciyətiniz tez bir <br> zamanda işlənilib sizə cavab verəciyik
+                    </p>
+                </div>
+                <div class="newprod__wrap error__wrap-help">
                     <div class="newprod__item df aifs jcsb fww">
                         <span class="newprod__name">
-                            Kateqoriya
+                            Adınız
                             <span>*</span>
                         </span>
                         <div class="newprod__input">
-                            <select name="kateqoriya" data-selects>
-                                <option value="İşıqlandırma">İşıqlandırma</option>
-                                <option value="Təkərlər">Təkərlər</option>
-                                <option value="Mühərrik yağlar">Mühərrik yağlar</option>
-                                <option value="Kateqoriya">Kateqoriya</option>
-                                <option value="Kateqoriya">Kateqoriya</option>
-                            </select>
+                            <input type="text" name="errname">
                         </div>
                     </div>
                     <div class="newprod__item df aifs jcsb fww">
                         <span class="newprod__name">
-                            Məhsulun növü
+                            Telefon
                             <span>*</span>
                         </span>
                         <div class="newprod__input">
-                            <input type="text" name="prodType">
+                            <input type="text" name="errphone">
+                        </div>
+                    </div>
+                    <div class="newprod__item df aifs jcsb fww">
+                        <span class="newprod__name">
+                            Electron ünvan
+                            <span>*</span>
+                        </span>
+                        <div class="newprod__input">
+                            <input type="text" name="errpost">
                         </div>
                     </div>
                     <div class="newprod__item df jcsb fww">
@@ -339,39 +338,17 @@
                     </div>
                     <div class="newprod__item df aifs jcsb fww">
                         <span class="newprod__name">
-                            Elanın adı
+                            Məhsulun növü:
                             <span>*</span>
                         </span>
                         <div class="newprod__input">
-                            <input type="text" name="prodname">
-                            <span class="newprod__input-label">
-                                <span>75</span> simvol qalıb
-                            </span>
-                            <span class="newprod__input-alert">
-                                Ad yerində qiymət və kontakt məlumatlarınızı yazmayın və “satacağam” sözündən istifadə etmayin
-                            </span>
-                        </div>
-                    </div>
-                    <div class="newprod__item df jcsb fww">
-                        <span class="newprod__name">
-                            Original
-                            <span>*</span>
-                        </span>
-                        <div class="newprod__input df aic fww">
-                            <div class="newprod__input-radio df fww">
-                                <div class="newprod__radio">
-                                    <input type="radio" name="orig" id="orig-yes">
-                                    <label for="orig-yes">
-                                        Bəli
-                                    </label>
-                                </div>
-                                <div class="newprod__radio">
-                                    <input type="radio" name="orig" id="orig-no">
-                                    <label for="orig-no">
-                                        Xeir
-                                    </label>
-                                </div>
-                            </div>
+                            <select name="kateqoriya" data-selects>
+                                <option value="İşıqlandırma">İşıqlandırma</option>
+                                <option value="Təkərlər">Təkərlər</option>
+                                <option value="Mühərrik yağlar">Mühərrik yağlar</option>
+                                <option value="Təkərlər">Təkərlər</option>
+                                <option value="Təkərlər">Təkərlər</option>
+                            </select>
                         </div>
                     </div>
                     <div class="newprod__item df aifs jcsb fww">
@@ -389,22 +366,26 @@
                             </p>
                         </div>
                     </div>
-                    <div class="newprod__item df aifs jcsb fww">
+                    <div class="newprod__item df jcsb fww">
                         <span class="newprod__name">
-                            Analogun firmasi
+                            Analogu olar
                             <span>*</span>
                         </span>
-                        <div class="newprod__input">
-                            <input type="text" name="analogFirm">
-                        </div>
-                    </div>
-                    <div class="newprod__item df aifs jcsb fww">
-                        <span class="newprod__name">
-                            Analogun nömrəsi
-                            <span>*</span>
-                        </span>
-                        <div class="newprod__input">
-                            <input type="text" name="analogNum">
+                        <div class="newprod__input df aic fww">
+                            <div class="newprod__input-radio df fww">
+                                <div class="newprod__radio">
+                                    <input type="radio" name="orig" id="orig-yes">
+                                    <label for="orig-yes">
+                                        Bəli
+                                    </label>
+                                </div>
+                                <div class="newprod__radio">
+                                    <input type="radio" name="orig" id="orig-no">
+                                    <label for="orig-no">
+                                        Xeir
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="newprod__item df aifs jcsb fww">
@@ -452,89 +433,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="newprod__item df jcsb fww">
-                        <span class="newprod__name">
-                            Yeni məhsul
-                            <span>*</span>
-                        </span>
-                        <div class="newprod__input df aic fww">
-                            <div class="newprod__input-radio df fww">
-                                <div class="newprod__radio">
-                                    <input type="radio" name="new" id="new-yes">
-                                    <label for="new-yes">
-                                        Bəli
-                                    </label>
-                                </div>
-                                <div class="newprod__radio">
-                                    <input type="radio" name="new" id="new-no">
-                                    <label for="new-no">
-                                        Xeir
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="newprod__item df aifs jcsb fww">
                         <span class="newprod__name">
-                            Çatdırma
-                            <span>*</span>
-                        </span>
-                        <div class="newprod__input df aic fww">
-                            <div class="newprod__check">
-                                <input type="checkbox" name="delivery" id="delivery">
-                                <label for="delivery">
-                                    Mümkündür
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="newprod__item df aifs jcsb fww">
-                        <span class="newprod__name">
-                            Şəkillər
-                            <span>*</span>
-                        </span>
-                        <div class="newprod__input df">
-                            <div class="b-upload b-upload_multi wrapperAddFile" id="multiupload">
-                                <div class="addFile__wrap df fww">
-                                    <div class="js-files b-upload__files dif fww">
-                                        <div class="js-file-tpl b-thumb" data-id="<%=uid%>" title="<%-name%>, <%-sizeText%>">
-                                            <div class="bthumb-wrap">
-                                                <div data-fileapi="file.remove" class="b-thumb__del"><svg width="16" height="16"><use xlink:href="img/sprite.svg#crossdel"></use></svg></div>
-                                                <div class="b-thumb__preview">
-                                                    <div class="b-thumb__preview__pic"></div>
-                                                </div>
-                                                <% if( /^image/.test(type) ){ %>
-                                                <div data-fileapi="file.rotate.cw" class="b-thumb__rotate"><svg width="16" height="16"><use xlink:href="img/sprite.svg#rotate"></use></svg></div>
-                                                <% } %>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="addFile-icon dif aic jcc">
-                                        <svg width="36" height="29"><use xlink:href="img/sprite.svg#drop"></use></svg>
-                                    </div>
-                                </div>
-                                <div class="addFile">
-                                    <input type="file" name="filedata" accept=".jpg, .jpeg, .png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="newprod__item df aifs jcsb fww">
-                        <span class="newprod__name">
-                            Giymət
-                            <span>*</span>
-                        </span>
-                        <div class="newprod__input df aic">
-                            <input type="number" name="price">
-                            <span>
-                                AZN
-                            </span>
-                        </div>
-                    </div>
-                    <div class="newprod__item df aifs jcsb fww">
-                        <span class="newprod__name">
-                            Məzmun
-                            <span>*</span>
+                            Şərh yaz
                         </span>
                         <div class="newprod__input newprod__textarea">
                             <textarea name="comment"></textarea>
@@ -554,13 +455,13 @@
                                 </label>
                             </div>
                             <button class="form__search trans">
-                                Şifrəni emaila göndər
+                                Sifariş et
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <footer class="footer">
             <div class="footer__catalog">
                 <div class="container">

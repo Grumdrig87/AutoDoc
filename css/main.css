@@ -2269,3 +2269,65 @@ input[type="number"]:focus {
 .newprod__input-radio {
 	margin: -10px;
 }
+.newprod__input-part {
+	width: 100px;
+	min-width: 100px;
+}
+.newprod__input-part:not(:last-child) {
+	margin-right: 30px;
+}
+.newprod__input-part input::-webkit-input-placeholder {
+	color: #CECECE;
+}
+.newprod__input-part input:-moz-placeholder {
+	color: #CECECE;
+}
+.newprod__input-part input::-moz-placeholder {
+	color: #CECECE;
+}
+.newprod__input-part input:-ms-input-placeholder {
+	color: #CECECE;
+}
+.newprod__input-part input::-ms-input-placeholder {
+	color: #CECECE;
+}
+.newprod__input-part input::placeholder {
+	color: #CECECE;
+}
+.container-sm {
+	max-width: 775px;
+}
+.error__tit {
+	margin-bottom: 15px;
+	text-align: center;
+	font-family: 'Arch';
+	font-weight: 400;
+	font-size: 42px;
+	line-height: 46px;
+	color: #212121;
+}
+.error__img {
+	margin: 26px 0 15px;
+}
+.error__wrap p {
+	text-align: center;
+}
+.error__wrap {
+	margin-bottom: 48px;
+}
+.error-page {
+	padding: 110px 0 60px;
+}
+.error__wrap-help {
+	padding: 0;
+	background: transparent;
+}
+.error__wrap-help .newprod__item {
+	width: 100%;
+}
+.error__wrap-help .select2-container--default.select2-container--disabled .select2-selection--single {
+	background: #fff !important;
+}
+.error__wrap-help .newprod__item:not(:last-child) {
+    margin-bottom: 10px;
+}
