@@ -2442,3 +2442,55 @@ input[type="number"]:focus {
 .search__cat:not(:last-child) {
 	margin-bottom: 60px;
 }
+.cabinet__top {
+	margin-bottom: 20px;
+}
+.cabinet__money-count {
+	margin: 0 10px 0 18px;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 28px;
+	color: #FF3333;
+}
+.cabinet__money:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+.cabinet__menu a {
+	color: #88A7AA;
+}
+.cabinet__menu li a {
+	padding: 16px 10px;
+	border-bottom: 1px solid #CECECE;
+}
+.cabinet__menu li:first-child a {
+	border-top: 1px solid #CECECE;
+}
+.cabinet__menu li a svg {
+	margin-right: 9px;
+}
+.cabinet__menu li.active a svg path {
+	stroke: #212121;
+}
+.cabinet__menu li.active a,
+.cabinet__menu li a:hover {
+	color: #212121;
+	background: #fff;
+	text-decoration: none;
+}
+.cabinet__menu li a:hover svg path {
+	stroke: #212121;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.cabinet__top .title-m {
+	color: #212121;
+}
+.cabinet {
+	padding: 14px 0 60px;
+}
+.cabinet__money {
+    margin-right: 16px;
+}
