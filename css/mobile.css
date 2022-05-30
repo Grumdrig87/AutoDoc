@@ -158,11 +158,11 @@
     position: relative;
     padding-right: 22px;
 }
-.header__nav .sub-menu > li.menu-item-has-children > .sub-wrap {
+.header__nav .sub-menu > ul li.menu-item-has-children > .sub-wrap {
   position: relative;
   left: 0;
 }
-.header__nav .sub-menu > li.menu-item-has-children {
+.header__nav .sub-menu > ul li.menu-item-has-children {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
