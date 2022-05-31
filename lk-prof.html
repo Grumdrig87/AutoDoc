@@ -289,7 +289,7 @@
                         <svg width="19" height="19"><use xlink:href="img/sprite.svg#plus"></use></svg>
                     </a>
                 </div>
-                <div class="cabinet__wrap df jcsb">
+                <div class="cabinet__wrap df jcsb fww">
                     <div class="offer__aside">
                         <ul class="cabinet__menu">
                             <li>
@@ -333,8 +333,22 @@
                     <div class="offer__catalog">
                         <form action="post" class="lk__wrap">
                             <div class="profile__fotos">
-                                <div class="profile__foto-big"></div>
-                                <div class="profile__foto-sm"></div>
+                                <div class="profile__foto-big" data-proffoto>
+                                    <div class="js-preview userpic__preview obj-cover"></div>
+                                    <div class="btn btn-success js-fileapi-wrapper">
+                                        <div class="js-browse">
+                                            <input type="file" name="filedata">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile__foto-sm" data-proffotosm>
+                                    <div class="js-preview userpic__preview obj-cover"></div>
+                                    <div class="btn btn-success js-fileapi-wrapper">
+                                        <div class="js-browse">
+                                            <input type="file" name="filedata">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="profile__wrap df fww">
                                 <div class="profile__item">
@@ -597,6 +611,7 @@
     <script src="js/fileapi/FileAPI.min.js"></script>
     <script src="js/fileapi/jquery.fileapi.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/upload.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

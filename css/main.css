@@ -2494,3 +2494,138 @@ input[type="number"]:focus {
 .cabinet__money {
     margin-right: 16px;
 }
+.js-browse input {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.profile__foto-big {
+	position: relative;
+}
+.lk__wrap {
+	padding: 20px;
+	background: #fff;
+}
+.profile__fotos {
+	position: relative;
+	margin-bottom: 47px;
+}
+.profile__foto-big {
+	height: 250px;
+	background: #FAF7F2 url('../img/addfotobig.png') no-repeat center center;
+	border: 1px solid #88A7AA;
+	overflow: hidden;
+}
+.userpic__preview {
+	width: 100%;
+	height: 100%;
+}
+.profile__foto-sm {
+	position: absolute;
+	background: #FAF7F2 url('../img/addfotosm.png') no-repeat center center;
+	border: 1px solid #88A7AA;
+	overflow: hidden;
+	width: 208px;
+	height: 208px;
+	left: 10px;
+	bottom: -18px;
+}
+.profile__wrap {
+	margin: -15px -9.5px;
+}
+.profile__item {
+	width: 50%;
+	padding: 15px 9.5px;
+}
+.profile__item span,
+.profile__item input {
+	display: block;
+	width: 100%;
+}
+.profile__item span,
+.profile__item input:not(:last-child) {
+	margin-bottom: 10px;
+}
+.profile__item input {
+	padding: 12px 9px 9px;
+	background: #FFFFFF;
+	border: 1px solid #CECECE;
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 130%;
+}
+.profile__item input::-webkit-input-placeholder {
+	color: #CECECE;
+}
+.profile__item input:-moz-placeholder {
+	color: #CECECE;
+}
+.profile__item input::-moz-placeholder {
+	color: #CECECE;
+}
+.profile__item input:-ms-input-placeholder {
+	color: #CECECE;
+}
+.profile__item input::-ms-input-placeholder {
+	color: #CECECE;
+}
+.profile__item input::placeholder {
+	color: #CECECE;
+}
+.profile__btn {
+	margin-top: 60px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	display: block;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	background: #FFB200;
+	font-family: 'Arch';
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 26px;
+	text-align: center;
+	padding: 7px;
+	width: 100%;
+}
+.profile__btn:hover {
+	opacity: 0.8;
+}
+.tarix__table-item {
+	color: #000;
+}
+.tarix__table-name {
+	width: 33.5%;
+	max-width: 309px;
+	font-family: 'Arch';
+	color: #212121;
+}
+.tarix__table-price {
+	width: 6.5%;
+}
+.tarix__table-date {
+	width: 9.5%;
+}
+.tarix__table-num {
+	width: 2.5%;
+}
+.tarix__table-head {
+	font-weight: 600;
+	color: #000;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CECECE;
+	margin-bottom: 10px;
+}
+.tarix__table-item:not(:last-child) {
+	margin-bottom: 20px;
+}

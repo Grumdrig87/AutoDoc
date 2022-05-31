@@ -5,8 +5,6 @@ jQuery(document).ready(function($) {
     })
   }
 
-  // upload
-  
  
   // burger
   $('[data-burger]').click(function() {
