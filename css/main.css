@@ -2632,6 +2632,7 @@ input[type="number"]:focus {
 	background: #FFB200;
 	color: #212121;
 	border: none !important;
+	padding: 10px;
 }
 .cardtov__menu li a svg {
 	margin-right: 10px;
