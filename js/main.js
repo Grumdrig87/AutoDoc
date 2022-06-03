@@ -71,6 +71,12 @@ if ($('[data-fotoprev]').length > 0) {
         .closest('.autodoc__catalog').find('div.autodoc__content-item').removeClass('active').eq($(this).index()).addClass('active');
       });
     }
+    if ($('[data-userpick]').length > 0) {
+      $('[data-userpick]').on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active')
+          .closest('.register__pop').find('form.register__form').removeClass('active').eq($(this).index()).addClass('active');
+        });
+      }
   // select
   function select (data,set,dropclass) {
     if (jQuery(data).length > 0) {
@@ -87,8 +93,27 @@ if ($('[data-fotoprev]').length > 0) {
   select ('[data-engine]','100%',"main-drop");
   select ('[data-selects]','100%',"wheel-drop");
 
-$('.main__search-item select').on("change", function(e) { 
-  $(this).parent().addClass('selected');
-});
-
+  $('.main__search-item select').on("change", function(e) { 
+    $(this).parent().addClass('selected');
+  });
+  var $buffer = $('.input-buffer');
+  function inputWhidth () {
+    $buffer.text($('[data-summ]').val());
+    $('[data-summ]').width($buffer.width());
+  };
+  inputWhidth ();
+  $('[data-summ]').on('change', function(){
+    this.value = parseFloat(this.value).toFixed(2);
+    inputWhidth ();
+  })
+  $('[data-summ]').on('input', function() {
+    inputWhidth ();
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/g, ''));
+  })
+  $('[data-card]').on('input', function() {
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/g, ''));
+  })
+  $('[data-cardNumber]').mask('9999 9999 9999 9999');
+  $('[data-cardDate]').mask('99/99');
+  $('[data-cardCvc]').mask('999');
 })

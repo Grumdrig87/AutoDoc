@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+	<title>AutoDoc</title>
+	<meta name="keywords" content="AutoDoc" />
+    <meta name="description" content="AutoDoc">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body style="background: #E5E5E5;">
+    <div class="container" style="padding-top: 50px;">
+        <div class="pop__up">
+            <div class="pop__up-close">
+                <svg width="24" height="24"><use xlink:href="img/sprite.svg#x"></use></svg>
+            </div>
+            <form action="post" class="login__pop">
+                <div class="pop__up-title">
+                    Daxil olmaq
+                </div>
+                <div class="pop__up-item">
+                    <input type="text" name="login" placeholder="Adı, soyad" class="input__lk">
+                    <input type="password" name="password" placeholder="Şifrə" class="input__lk">
+                </div>
+                <div class="pop__up-item">
+                    <div class="filter__checkbox">
+                        <input type="checkbox" checked name="sogl" id="sogl">
+                        <label for="sogl">
+                            <a href="#">İstifadəçi qaydaları</a> ilə razılaşdım
+                        </label>
+                    </div>
+                </div>
+                <div class="pop__up-item">
+                    <button class="profile__btn">Daxil ol</button>
+                </div>
+                <span class="pop__up-txt">
+                    və ya sosial şəbəkə ilə daxil ol 
+                </span>
+                <div class="pop__up-soc df jcc">
+                    <a href="#" class="pop__up-socitem df aic jcc pop__up-socfb">
+                        <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.65708 12.3648H11.3793L11.9637 8.56055H7.65632V6.48134C7.65632 4.90099 8.16957 3.49962 9.63891 3.49962H12V0.179741C11.5852 0.123382 10.7078 0 9.04996 0C5.58819 0 3.55867 1.8393 3.55867 6.0297V8.56055H0V12.3648H3.55867V22.821C4.26344 22.9276 4.97729 23 5.71007 23C6.37245 23 7.01893 22.9391 7.65708 22.8522V12.3648Z" fill="white"/>
+                        </svg>                            
+                    </a>
+                    <a href="#" class="pop__up-socitem df aic jcc pop__up-socgoog">
+                        <svg width="20" height="20"><use xlink:href="img/sprite.svg#google"></use></svg>
+                    </a>
+                    <a href="#" class="pop__up-socitem df aic jcc pop__up-socph">
+                        <svg width="27" height="25"><use xlink:href="img/sprite.svg#soc-phone"></use></svg>
+                    </a>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="pop__up">
+            <div class="pop__up-close">
+                <svg width="24" height="24"><use xlink:href="img/sprite.svg#x"></use></svg>
+            </div>
+            <div class="register__pop">
+                <div class="pop__up-title">
+                    Qeydiyyatı
+                </div>
+                <div class="newprod__input-radio df fww jcc">
+                    <div class="newprod__radio active" data-userpick>
+                        <input type="radio" checked name="user" id="user">
+                        <label for="user">
+                            İstifadəçi
+                        </label>
+                    </div>
+                    <div class="newprod__radio" data-userpick>
+                        <input type="radio" name="user" id="mag">
+                        <label for="mag">
+                            Dükan
+                        </label>
+                    </div>
+                    <div class="newprod__radio" data-userpick>
+                        <input type="radio" name="user" id="serv">
+                        <label for="serv">
+                            Servis
+                        </label>
+                    </div>
+                </div>
+                <div class="register__forms">
+                    <form action="post" class="register__form active">
+                        <div class="pop__up-item">
+                            <input type="text" name="login" placeholder="Adı, soyad" class="input__lk">
+                            <input type="tel" name="tel" placeholder="Telefon nömrəniz" class="input__lk">
+                            <input type="email" name="email" placeholder="Email ünvanı" class="input__lk">
+                        </div>
+                        <div class="pop__up-item">
+                            <div class="filter__checkbox">
+                                <input type="checkbox" checked name="sogl1" id="sogl1">
+                                <label for="sogl1">
+                                    <a href="#">İstifadəçi qaydaları</a> ilə razılaşdım
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pop__up-item">
+                            <button class="profile__btn">Şifrəni emaila göndər</button>
+                        </div>
+                        <span class="pop__up-txt">
+                            və ya sosial şəbəkə ilə daxil ol 
+                        </span>
+                        <div class="pop__up-soc df jcc">
+                            <a href="#" class="pop__up-socitem df aic jcc pop__up-socfb">
+                                <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.65708 12.3648H11.3793L11.9637 8.56055H7.65632V6.48134C7.65632 4.90099 8.16957 3.49962 9.63891 3.49962H12V0.179741C11.5852 0.123382 10.7078 0 9.04996 0C5.58819 0 3.55867 1.8393 3.55867 6.0297V8.56055H0V12.3648H3.55867V22.821C4.26344 22.9276 4.97729 23 5.71007 23C6.37245 23 7.01893 22.9391 7.65708 22.8522V12.3648Z" fill="white"/>
+                                </svg>                            
+                            </a>
+                            <a href="#" class="pop__up-socitem df aic jcc pop__up-socgoog">
+                                <svg width="20" height="20"><use xlink:href="img/sprite.svg#google"></use></svg>
+                            </a>
+                            <a href="#" class="pop__up-socitem df aic jcc pop__up-socph">
+                                <svg width="27" height="25"><use xlink:href="img/sprite.svg#soc-phone"></use></svg>
+                            </a>
+                        </div>
+                    </form>
+                    <form action="post" class="register__form">
+                        <div class="pop__up-item">
+                            <input type="text" name="name" placeholder="Adınız" class="input__lk">
+                            <input type="text" name="shopname" placeholder="Dükanın adı" class="input__lk">
+                            <input type="text" name="shopadress" placeholder="Dükanın ünvanı" class="input__lk">
+                            <input type="tel" name="shoptel" placeholder="Dükanın telefon nömrəsi" class="input__lk">
+                        </div>
+                        <div class="pop__up-item">
+                            <div class="filter__checkbox">
+                                <input type="checkbox" checked name="sogl2" id="sogl2">
+                                <label for="sogl2">
+                                    <a href="#">İstifadəçi qaydaları</a> ilə razılaşdım
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pop__up-item">
+                            <button class="profile__btn">Müraciyyəti göndər</button>
+                        </div>
+                    </form>
+                    <form action="post" class="register__form">
+                        <div class="pop__up-item">
+                            <input type="text" name="name" placeholder="Adınız" class="input__lk">
+                            <input type="text" name="servname" placeholder="Servisin adı" class="input__lk">
+                            <input type="text" name="servspec" placeholder="Servisin ixtisası" class="input__lk">
+                            <input type="text" name="servadress" placeholder="Servisin ünvanı" class="input__lk">
+                            <input type="tel" name="servtel" placeholder="Servisin telefon nömrəsi" class="input__lk">
+                        </div>
+                        <div class="pop__up-item">
+                            <div class="filter__checkbox">
+                                <input type="checkbox" checked name="sogl3" id="sogl3">
+                                <label for="sogl3">
+                                    <a href="#">İstifadəçi qaydaları</a> ilə razılaşdım
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pop__up-item">
+                            <button class="profile__btn">Müraciyyəti göndər</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <object class="hidden" type="image/svg+xml" data="img/sprite.svg" >Your browser does not support SVG</object>
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/select2/css/select2.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/select2/js/select2.full.min.js"></script>
+    <script src="js/fileapi/FileAPI.min.js"></script>
+    <script src="js/fileapi/jquery.fileapi.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

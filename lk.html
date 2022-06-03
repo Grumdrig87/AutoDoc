@@ -281,7 +281,7 @@
                     <h1 class="title-m">
                         Şəxsi kabinet
                     </h1>
-                    <a href="#" class="cabinet__money df aic">
+                    <a data-fancybox data-src="#payment" href="javascript:;" class="cabinet__money df aic">
                         <svg width="27" height="30"><use xlink:href="img/sprite.svg#wallet"></use></svg>
                         <span class="cabinet__money-count">
                             <span>10</span>azn
@@ -843,6 +843,46 @@
                 </div>
             </div>
         </footer>
+        <div class="pop__up payment__pop" id="payment">
+            <div class="pop__up-close" data-fancybox-close>
+                <svg width="24" height="24"><use xlink:href="img/sprite.svg#x"></use></svg>
+            </div>
+            <form action="post" class="login__pop">
+                <div class="pop__up-title">
+                    Kart məlumatları
+                </div>
+                <div class="pop__up-item pop__up-paymentInput">
+                    <span class="pop__up-itemtit">
+                        Məbləğ
+                    </span>
+                    <label for="paymentSumm" class="input__lk label__summ df">
+                        <input type="text" name="paysumm" pattern="[0-9]+([\.][0-9]{1,2})?" placeholder="0.00" id="paymentSumm" data-summ>
+                        <span class="input-buffer"></span>
+                    </label>
+                </div>
+                <div class="pop__up-item">
+                    <span class="pop__up-itemtit">
+                        Kart məlumatları
+                    </span>
+                    <div class="payment__wrap df fww">
+                        <div class="payment__wrap-item">
+                            <label for="paymentCard" class="input__lk label__card df">
+                                <input type="text" name="cardnumber" placeholder="0000 0000 0000 0000" id="paymentCard" data-card data-cardNumber>
+                            </label>
+                        </div>
+                        <div class="payment__wrap-item">
+                            <input type="text" name="dateexp" placeholder="AY/İL" class="input__lk" data-card data-cardDate>
+                        </div>
+                        <div class="payment__wrap-item">
+                            <input type="text" name="cvc" placeholder="CVC/CVC2" class="input__lk" data-card data-cardCvc>
+                        </div>
+                        <div class="payment__wrap-item">
+                            <button class="profile__btn">ÖDƏ</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <object class="hidden" type="image/svg+xml" data="img/sprite.svg" >Your browser does not support SVG</object>
     <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
@@ -853,6 +893,7 @@
     <script src="js/fileapi/FileAPI.min.js"></script>
     <script src="js/fileapi/jquery.fileapi.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
