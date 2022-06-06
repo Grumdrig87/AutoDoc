@@ -4,7 +4,9 @@ jQuery(document).ready(function($) {
       $(this).toggleClass('active');
     })
   }
-
+  $('[data-login]').on('click', function(){
+    $(this).toggleClass('open');
+  })
  
   // burger
   $('[data-burger]').click(function() {
@@ -72,9 +74,9 @@ if ($('[data-fotoprev]').length > 0) {
       });
     }
     if ($('[data-userpick]').length > 0) {
-      $('[data-userpick]').on('click', function() {
-        $(this).addClass('active').siblings().removeClass('active')
-          .closest('.register__pop').find('form.register__form').removeClass('active').eq($(this).index()).addClass('active');
+      $('[data-userpick] label').on('click', function() {
+        $(this).parent().addClass('active').siblings().removeClass('active')
+          .closest('.register__pop').find('form.register__form').removeClass('active').eq($(this).parent().index()).addClass('active');
         });
       }
   // select
@@ -116,4 +118,18 @@ if ($('[data-fotoprev]').length > 0) {
   $('[data-cardNumber]').mask('9999 9999 9999 9999');
   $('[data-cardDate]').mask('99/99');
   $('[data-cardCvc]').mask('999');
+  $.fn.setCursorPosition = function(pos) {
+    if ($(this).get(0).setSelectionRange) {
+      $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+      var range = $(this).get(0).createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  };
+  $('[data-cardDate]').click(function(){
+    $(this).setCursorPosition(0);  // set position number
+  });
 })

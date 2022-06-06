@@ -926,6 +926,9 @@
   font-size: 31px;
   line-height: 36px;
 }
+.pop__up {
+  padding: 30px 60px !important;
+}
 }
 
 
@@ -1238,6 +1241,9 @@ body {
 .lk__wrap .product__seller-viewed,
 .lk__wrap .product__favorite {
   margin-right: 0;
+}
+.pop__up {
+  padding: 30px !important;
 }
 }
 
